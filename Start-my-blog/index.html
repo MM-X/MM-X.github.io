@@ -29,7 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.1.1"></head>
+<meta name="generator" content="Hexo 4.1.1"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -414,12 +415,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Start/">
-                                <span class="chip bg-color">Start</span>
-                            </a>
-                        
                             <a href="/tags/Markdown/">
                                 <span class="chip bg-color">Markdown</span>
+                            </a>
+                        
+                            <a href="/tags/Start/">
+                                <span class="chip bg-color">Start</span>
                             </a>
                         
                     </div>
@@ -450,14 +451,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2019-12-21
+                    2019-12-28
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    374
+                    385
                 </div>
                 
 
@@ -469,10 +470,10 @@
                 
 				
                 
-                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                    <span id="busuanzi_container_page_pv" style='display:none'></span>
                         <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
                         <span id="busuanzi_value_page_pv"></span>
-                    </div>
+                    </span>
 				
             </div>
             
@@ -488,63 +489,82 @@
 <hr>
 <hr>
 <p>测试代码</p>
-<pre><code># -*- coding: utf-8 -*-
-import argparse
-import os
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># -*- coding: utf-8 -*-</span>
+<span class="token keyword">import</span> argparse
+<span class="token keyword">import</span> os
 
-import cv2
-import numpy as np
+<span class="token keyword">import</span> cv2
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
 
-curr_dir = os.path.dirname(__file__)
-default_pic = os.path.join(os.path.dirname(curr_dir), &quot;pic1.png&quot;)
+curr_dir <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>dirname<span class="token punctuation">(</span>__file__<span class="token punctuation">)</span>
+default_pic <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>dirname<span class="token punctuation">(</span>curr_dir<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"pic1.png"</span><span class="token punctuation">)</span>
 
-SVD_TRUNC_VALUE = 8  # compress rate:  0.19616346784776903
-# SVD_TRUNC_VALUE = 80  # compress rate:  0.110595062335958
+SVD_TRUNC_VALUE <span class="token operator">=</span> <span class="token number">8</span>  <span class="token comment" spellcheck="true"># compress rate:  0.19616346784776903</span>
+<span class="token comment" spellcheck="true"># SVD_TRUNC_VALUE = 80  # compress rate:  0.110595062335958</span>
 
 
-if __name__ == &#39;__main__&#39;:
-    parser = argparse.ArgumentParser(&quot;SVD argument parser&quot;)
-    parser.add_argument(&quot;-t&quot;, &quot;--trunc_value&quot;, help=&quot;truncate value&quot;, type=int)
-    parser.add_argument(&quot;-f&quot;, &quot;--file&quot;, help=&quot;picture file path&quot;)
-    args = parser.parse_args()
-    if args.file is not None:
-        if os.path.isfile(args.file):
-            img_path = args.file
-        else:
-            img_path = default_pic
-    else:
-        img_path = default_pic
-    if args.trunc_value is not None:
-        trunc_val = args.trunc_value
-    else:
-        trunc_val = SVD_TRUNC_VALUE
-    src = cv2.imread(img_path)
-    src = cv2.cvtColor(src, cv2.COLOR_RGB2GRAY)
-    src_matrix = np.asarray(src)
-    U, s, V = np.linalg.svd(src_matrix, full_matrices=True)
-    print(&#39;U shape: &#39;, U.shape, &#39; s shape: &#39;, s.shape, &#39; V shape: &#39;, V.shape)
-    s_trunc = s[s &gt; trunc_val]  # get the singular values which is larger than SVD_TRUNC_VALUE
-    U_trunc = U[:, :s_trunc.shape[0]]
-    V_trunc = V[:s_trunc.shape[0], :]
-    print(&#39;U_trunc shape: &#39;, U_trunc.shape, &#39; Ss_trunc shape: &#39;, s_trunc.shape, &#39; V_trunc shape: &#39;, V_trunc.shape)
-    S_trunc = np.diag(s_trunc)
-    dst_matrix = np.dot(U_trunc, np.dot(S_trunc, V_trunc))
-    dst = dst_matrix.astype(np.uint8)
-    print(&quot;np.allclose result: &quot;, np.allclose(src_matrix, dst_matrix))
-    dst_pixel_size = S_trunc.size + U_trunc.size + s_trunc.size
-    print(&quot;compress rate: &quot;, dst_pixel_size / src_matrix.size)
-    cv2.imshow(&#39;src&#39;, src)
-    cv2.imshow(&#39;dst&#39;, dst)
-    cv2.waitKey()
-    file_dir = os.path.dirname(img_path)
-    file_name_list = os.path.splitext(os.path.basename(img_path))
-    file_name = file_name_list[0] + &#39;_trunc_&#39; + str(trunc_val) + file_name_list[1]
-    cv2.imwrite(os.path.join(file_dir, file_name), dst)</code></pre><hr>
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    parser <span class="token operator">=</span> argparse<span class="token punctuation">.</span>ArgumentParser<span class="token punctuation">(</span><span class="token string">"SVD argument parser"</span><span class="token punctuation">)</span>
+    parser<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"-t"</span><span class="token punctuation">,</span> <span class="token string">"--trunc_value"</span><span class="token punctuation">,</span> help<span class="token operator">=</span><span class="token string">"truncate value"</span><span class="token punctuation">,</span> type<span class="token operator">=</span>int<span class="token punctuation">)</span>
+    parser<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"-f"</span><span class="token punctuation">,</span> <span class="token string">"--file"</span><span class="token punctuation">,</span> help<span class="token operator">=</span><span class="token string">"picture file path"</span><span class="token punctuation">)</span>
+    args <span class="token operator">=</span> parser<span class="token punctuation">.</span>parse_args<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> args<span class="token punctuation">.</span>file <span class="token keyword">is</span> <span class="token operator">not</span> None<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>isfile<span class="token punctuation">(</span>args<span class="token punctuation">.</span>file<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            img_path <span class="token operator">=</span> args<span class="token punctuation">.</span>file
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            img_path <span class="token operator">=</span> default_pic
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        img_path <span class="token operator">=</span> default_pic
+    <span class="token keyword">if</span> args<span class="token punctuation">.</span>trunc_value <span class="token keyword">is</span> <span class="token operator">not</span> None<span class="token punctuation">:</span>
+        trunc_val <span class="token operator">=</span> args<span class="token punctuation">.</span>trunc_value
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        trunc_val <span class="token operator">=</span> SVD_TRUNC_VALUE
+    src <span class="token operator">=</span> cv2<span class="token punctuation">.</span>imread<span class="token punctuation">(</span>img_path<span class="token punctuation">)</span>
+    src <span class="token operator">=</span> cv2<span class="token punctuation">.</span>cvtColor<span class="token punctuation">(</span>src<span class="token punctuation">,</span> cv2<span class="token punctuation">.</span>COLOR_RGB2GRAY<span class="token punctuation">)</span>
+    src_matrix <span class="token operator">=</span> np<span class="token punctuation">.</span>asarray<span class="token punctuation">(</span>src<span class="token punctuation">)</span>
+    U<span class="token punctuation">,</span> s<span class="token punctuation">,</span> V <span class="token operator">=</span> np<span class="token punctuation">.</span>linalg<span class="token punctuation">.</span>svd<span class="token punctuation">(</span>src_matrix<span class="token punctuation">,</span> full_matrices<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'U shape: '</span><span class="token punctuation">,</span> U<span class="token punctuation">.</span>shape<span class="token punctuation">,</span> <span class="token string">' s shape: '</span><span class="token punctuation">,</span> s<span class="token punctuation">.</span>shape<span class="token punctuation">,</span> <span class="token string">' V shape: '</span><span class="token punctuation">,</span> V<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>
+    s_trunc <span class="token operator">=</span> s<span class="token punctuation">[</span>s <span class="token operator">></span> trunc_val<span class="token punctuation">]</span>  <span class="token comment" spellcheck="true"># get the singular values which is larger than SVD_TRUNC_VALUE</span>
+    U_trunc <span class="token operator">=</span> U<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token punctuation">:</span>s_trunc<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+    V_trunc <span class="token operator">=</span> V<span class="token punctuation">[</span><span class="token punctuation">:</span>s_trunc<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">:</span><span class="token punctuation">]</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'U_trunc shape: '</span><span class="token punctuation">,</span> U_trunc<span class="token punctuation">.</span>shape<span class="token punctuation">,</span> <span class="token string">' Ss_trunc shape: '</span><span class="token punctuation">,</span> s_trunc<span class="token punctuation">.</span>shape<span class="token punctuation">,</span> <span class="token string">' V_trunc shape: '</span><span class="token punctuation">,</span> V_trunc<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>
+    S_trunc <span class="token operator">=</span> np<span class="token punctuation">.</span>diag<span class="token punctuation">(</span>s_trunc<span class="token punctuation">)</span>
+    dst_matrix <span class="token operator">=</span> np<span class="token punctuation">.</span>dot<span class="token punctuation">(</span>U_trunc<span class="token punctuation">,</span> np<span class="token punctuation">.</span>dot<span class="token punctuation">(</span>S_trunc<span class="token punctuation">,</span> V_trunc<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    dst <span class="token operator">=</span> dst_matrix<span class="token punctuation">.</span>astype<span class="token punctuation">(</span>np<span class="token punctuation">.</span>uint8<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"np.allclose result: "</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>allclose<span class="token punctuation">(</span>src_matrix<span class="token punctuation">,</span> dst_matrix<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    dst_pixel_size <span class="token operator">=</span> S_trunc<span class="token punctuation">.</span>size <span class="token operator">+</span> U_trunc<span class="token punctuation">.</span>size <span class="token operator">+</span> s_trunc<span class="token punctuation">.</span>size
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"compress rate: "</span><span class="token punctuation">,</span> dst_pixel_size <span class="token operator">/</span> src_matrix<span class="token punctuation">.</span>size<span class="token punctuation">)</span>
+    cv2<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span><span class="token string">'src'</span><span class="token punctuation">,</span> src<span class="token punctuation">)</span>
+    cv2<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span><span class="token string">'dst'</span><span class="token punctuation">,</span> dst<span class="token punctuation">)</span>
+    cv2<span class="token punctuation">.</span>waitKey<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    file_dir <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>dirname<span class="token punctuation">(</span>img_path<span class="token punctuation">)</span>
+    file_name_list <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>splitext<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>basename<span class="token punctuation">(</span>img_path<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    file_name <span class="token operator">=</span> file_name_list<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">'_trunc_'</span> <span class="token operator">+</span> str<span class="token punctuation">(</span>trunc_val<span class="token punctuation">)</span> <span class="token operator">+</span> file_name_list<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+    cv2<span class="token punctuation">.</span>imwrite<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>file_dir<span class="token punctuation">,</span> file_name<span class="token punctuation">)</span><span class="token punctuation">,</span> dst<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
 <hr>
 <p>测试公式</p>
 <p>$$<br>C_{n}=\frac{1}{T} \int_{-T / 2}^{T / 2} x(t) e^{-j n \omega_{0} t} d t<br>$$</p>
 <p>完工！！！</p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -607,12 +627,12 @@ if __name__ == &#39;__main__&#39;:
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Start/">
-                                    <span class="chip bg-color">Start</span>
-                                </a>
-                            
                                 <a href="/tags/Markdown/">
                                     <span class="chip bg-color">Markdown</span>
+                                </a>
+                            
+                                <a href="/tags/Start/">
+                                    <span class="chip bg-color">Start</span>
                                 </a>
                             
                         </div>
@@ -844,12 +864,12 @@ if __name__ == &#39;__main__&#39;:
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Start/">
-                        <span class="chip bg-color">Start</span>
-                    </a>
-                    
                     <a href="/tags/Markdown/">
                         <span class="chip bg-color">Markdown</span>
+                    </a>
+                    
+                    <a href="/tags/Start/">
+                        <span class="chip bg-color">Start</span>
                     </a>
                     
                 </div>
@@ -1004,7 +1024,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
+            headingSelector: 'h1, h2, h3, h4'
         });
 
         // modify the toc link href to support Chinese.
@@ -1016,7 +1036,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 
@@ -1091,26 +1111,32 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
         <div class="col s12 m8 l8 copy-right">
             &copy; 2019 MengXin. All Rights Reserved.
 
-            
-
             <br>
-            <span id="sitetime"></span>
+            <span id="sitetime"></span><span class="my-face">ღゝ◡╹)ノ♡</span>
 
             
+
             
             <br>
             
-            <span id="busuanzi_container_site_pv" style='display:none'>
+            <span id="busuanzi_container_site_pv" style='display:none'></span>
                 &nbsp;<i class="fa fa-heart-o"></i>&nbsp;
                 本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
 
             
+
             
-            <span id="busuanzi_container_site_uv" style='display:none'>
-                人次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+            <span id="busuanzi_container_site_uv" style='display:none'></span>
+                人次,&nbsp;访客人数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
 
             
             
+
+            
+                &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+                <span class="white-color">4.6k</span>
+                
+
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
     <a href="https://github.com/MM-X" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
@@ -1338,6 +1364,6 @@ WIDGET = {FID: 'yaeB7vnmth'}
     document.title = OriginTitile }, 3e3)) })
        </script>
 
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 
 </html>
