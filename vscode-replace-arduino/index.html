@@ -5,11 +5,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Markdown教程, 孙孟鑫 sunmengxin mengxin 孟鑫">
+    <meta name="keywords" content="VScode代替Arduino IDE实现代码补全文件跳转（详细）, 孙孟鑫 sunmengxin mengxin 孟鑫">
     <meta name="baidu-site-verification" content="wGFMStAFna" />
     <meta name="google-site-verification" content="aSdRqh383jhnQe6RPmd5mkt5UZMXUC1Z_tNs2cLpsyE" />
     <meta name="360-site-verification" content="" />
-    <meta name="description" content="MarkDown用法总结">
+    <meta name="description" content="VScode代替Arduino IDE">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Markdown教程 | MengXin</title>
+    <title>VScode代替Arduino IDE实现代码补全文件跳转（详细） | MengXin</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -297,12 +297,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.ax1x.com/2020/02/14/1jyP6P.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.ax1x.com/2020/02/15/1xgBHP.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Markdown教程</h1>
+                    <h1 class="description center-align post-title">VScode代替Arduino IDE实现代码补全文件跳转（详细）</h1>
                 </div>
             </div>
         </div>
@@ -419,16 +419,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Markdown/">
-                                <span class="chip bg-color">Markdown</span>
-                            </a>
-                        
-                            <a href="/tags/%E5%B7%A5%E5%85%B7/">
-                                <span class="chip bg-color">工具</span>
-                            </a>
-                        
                             <a href="/tags/%E5%8E%9F%E5%88%9B/">
                                 <span class="chip bg-color">原创</span>
+                            </a>
+                        
+                            <a href="/tags/VScode/">
+                                <span class="chip bg-color">VScode</span>
+                            </a>
+                        
+                            <a href="/tags/Arduino/">
+                                <span class="chip bg-color">Arduino</span>
                             </a>
                         
                     </div>
@@ -452,7 +452,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-14
+                    2020-02-15
                 </div>
                 
 
@@ -461,14 +461,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    4 分
                 </div>
                 
 				
@@ -484,274 +484,47 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一-标题"><a href="#一-标题" class="headerlink" title="一. 标题"></a>一. 标题</h2><p><span id="jump"> </span></p>
-<blockquote>
-<p>一级标题<br>======  </p>
-<p>二级标题<br>-—-  </p>
-</blockquote>
-<p><strong>显示效果：</strong><br><img src="https://s2.ax1x.com/2020/02/14/1XLRWq.png" alt=""> </p>
-<blockquote>
-<p># 一级标题<br>## 二级标题<br>### 三级标题<br>#### 四级标题<br>##### 五级标题<br>###### 六级标题 </p>
-</blockquote>
-<p><strong>显示效果：</strong><br><img src="https://s2.ax1x.com/2020/02/14/1XOI3t.png" alt=""><br><strong>HTML格式：</strong>  </p>
-<blockquote>
-<p>&lt;h1&gt;这是一级标题&lt;/h1&gt;<br>&lt;h2&gt;这是二级标题&lt;/h2&gt;<br>&lt;h3&gt;这是三级标题&lt;/h3&gt;</p>
-</blockquote>
-<hr>
-<h2 id="二-段落"><a href="#二-段落" class="headerlink" title="二. 段落"></a>二. 段落</h2><h3 id="1-换行"><a href="#1-换行" class="headerlink" title="1. 换行"></a>1. 换行</h3><blockquote>
-<p>1.段落换行使用两个以上空格+回车;<br>2.或者中间一个空行表示换行;<br>3.使用<code>&lt;br&gt;</code>换行，适用于插入多行空行； </p>
-</blockquote>
-<p><strong>显示效果：</strong><br>第一句<br><br><br>隔两行第二句</p>
-<h3 id="2-缩进字符"><a href="#2-缩进字符" class="headerlink" title="2. 缩进字符"></a>2. 缩进字符</h3><blockquote>
-<p><code>&amp;nbsp;</code>或者<code>&amp;#160;</code>：缩进1/4中文,别忘了写分号；<br><code>&amp;ensp;</code>或者<code>&amp;#8194;</code>：缩进1/2中文或者1个字符；<br><code>&amp;emsp;</code>或者<code>&amp;#8195;</code>：缩进1中文或者2个字符，建议用这个；</p>
-</blockquote>
-<p><strong>显示效果：</strong><br>不缩进的句子<br>&nbsp;用它缩进的句子<code>&amp;nbsp;</code><br>不缩进的句子<br> 用它缩进的句子<code>&amp;ensp;</code><br>不缩进的句子<br> 用它缩进的句子<code>&amp;emsp;</code>   </p>
-<h3 id="3-字体"><a href="#3-字体" class="headerlink" title="3. 字体"></a>3. 字体</h3><blockquote>
-<p>*斜体文本*<br>_斜体文本_<br>**粗体文本**<br>__粗体文本__<br>***粗斜体文本***<br>___粗斜体文本___</p>
-</blockquote>
-<p><strong>显示效果：</strong><br><img src="https://s2.ax1x.com/2020/02/14/1XjqYj.png" alt=""></p>
-<h3 id="4-分割线"><a href="#4-分割线" class="headerlink" title="4. 分割线"></a>4. 分割线</h3><blockquote>
-<p>***<br>******<br>_ _ _<br>- - -<br>-————</p>
-</blockquote>
-<p><strong>显示效果：</strong></p>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<h3 id="5-删除线"><a href="#5-删除线" class="headerlink" title="5. 删除线"></a>5. 删除线</h3><blockquote>
-<p>~~删除此段~~</p>
-</blockquote>
-<p><strong>显示效果:</strong><br><del>删除此段</del></p>
-<h3 id="6-下划线"><a href="#6-下划线" class="headerlink" title="6. 下划线"></a>6. 下划线</h3><blockquote>
-<p>&lt;u&gt;引用自HTML&lt;/u&gt;</p>
-</blockquote>
-<p><strong>显示效果：</strong><br><u>引用自HTML</u></p>
-<h3 id="7-脚注"><a href="#7-脚注" class="headerlink" title="7. 脚注"></a>7. 脚注</h3><blockquote>
-<p>参考文献1[1]，参考文献2[2]。<br>[1]:参考文献1<br>[2]:参考文献2</p>
-</blockquote>
-<p>参考文献1<a href="https://sunmengxin.cn">1</a>，参考文献2<a href="https://sunmengxin.cn">2</a>。</p>
-<hr>
-<h2 id="三-列表"><a href="#三-列表" class="headerlink" title="三. 列表"></a>三. 列表</h2><h3 id="1-无顺序"><a href="#1-无顺序" class="headerlink" title="1. 无顺序"></a>1. 无顺序</h3><blockquote>
-<p>* 第一项<br>* 第二项<br>* 第三项</p>
-</blockquote>
-<ul>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项  </li>
-</ul>
-<blockquote>
-<p>+ 第一项<br>+ 第二项</p>
-</blockquote>
-<ul>
-<li>第一项</li>
-<li>第二项  </li>
-</ul>
-<blockquote>
-<p>- 第一项<br>- 第二项</p>
-</blockquote>
-<ul>
-<li>第一项</li>
-<li>第二项</li>
-</ul>
-<h3 id="2-有顺序"><a href="#2-有顺序" class="headerlink" title="2. 有顺序"></a>2. 有顺序</h3><blockquote>
-<ol>
-<li>第一点</li>
-<li>第二点</li>
-<li>第三点</li>
-</ol>
-</blockquote>
-<ol>
-<li>第一点</li>
-<li>第二点</li>
-<li>第三点</li>
-</ol>
-<h3 id="3-列表嵌套"><a href="#3-列表嵌套" class="headerlink" title="3. 列表嵌套"></a>3. 列表嵌套</h3><blockquote>
-<ol>
-<li>第一项<br> - 第一点<br> - 第二点</li>
-<li>第二项<br> - 第一点<br> - 第二点</li>
-</ol>
-</blockquote>
-<ol>
-<li>第一项<ul>
-<li>第一点</li>
-<li>第二点</li>
-</ul>
-</li>
-<li>第二项<ul>
-<li>第一点</li>
-<li>第二点</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h2 id="四-区块"><a href="#四-区块" class="headerlink" title="四. 区块"></a>四. 区块</h2><p>&gt; 区块引用<br>&gt; 区块<br>区块<br>区块</p>
-<blockquote>
-<p>区块引用<br>区块<br>区块<br>区块</p>
-</blockquote>
-<h3 id="1-区块嵌套"><a href="#1-区块嵌套" class="headerlink" title="1. 区块嵌套"></a>1. 区块嵌套</h3><p>&gt; 最外层<br>&gt;&gt; 次外层<br>&gt;&gt;&gt; 里层</p>
-<blockquote>
-<p>最外层</p>
-<blockquote>
-<p>次外层</p>
-<blockquote>
-<p>里层<br><br></p>
-</blockquote>
-</blockquote>
-</blockquote>
-<h3 id="2-区块中使用列表"><a href="#2-区块中使用列表" class="headerlink" title="2. 区块中使用列表"></a>2. 区块中使用列表</h3><p>&gt; 区块使用列表<br>&gt; 1. 第一点<br>&gt; 2. 第二点<br>&gt; - 第一项<br>&gt; - 第二项</p>
-<blockquote>
-<p>区块使用列表</p>
-<ol>
-<li>第一点</li>
-<li>第二点</li>
-</ol>
-<ul>
-<li>第一项</li>
-<li>第二项</li>
-</ul>
-</blockquote>
-<h3 id="3-列表中使用区块"><a href="#3-列表中使用区块" class="headerlink" title="3. 列表中使用区块"></a>3. 列表中使用区块</h3><ul>
-<li>第一项<blockquote>
-<p>区块<br>区块2</p>
-</blockquote>
-</li>
-<li>第二项<blockquote>
-<p>区块1<br>区块2  </p>
-</blockquote>
-</li>
-</ul>
-<blockquote>
-<p>HTML: &lt;blockquote&gt;引用的内容&lt;/blockquote&gt;</p>
-</blockquote>
-<h2 id="五-代码"><a href="#五-代码" class="headerlink" title="五. 代码"></a>五. 代码</h2><p>代码区块使用4个空格或者一个制表符 </p>
-<pre><code>for(i=0,i&lt;2020,i++)
-{
-    year += year;
-}</code></pre><p>代码高亮,用```指定语言,<strong>注意不是单引号，是键盘上的<kbd>~</kbd>键</strong></p>
-<blockquote>
-<p>```c<br>for(i=0,i&lt;2020,i++)<br>    {<br>        year += year;<br>    }<br>```</p>
-</blockquote>
-<pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>i<span class="token operator">&lt;</span><span class="token number">2020</span><span class="token punctuation">,</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        year <span class="token operator">+</span><span class="token operator">=</span> year<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<blockquote>
-<p>单个代码`a=1` </p>
-</blockquote>
-<p>单个代码<code>a=1</code> </p>
-<h2 id="六-链接"><a href="#六-链接" class="headerlink" title="六. 链接"></a>六. 链接</h2><blockquote>
-<p>这是一个链接[我的博客](<a href="https://sunmengxin.cn\">https://sunmengxin.cn\</a>)<br>直接使用链接 &lt;<a href="http://www.sunmengxin.cn\>" target="_blank" rel="noopener">www.sunmengxin.cn\&gt;</a></p>
-</blockquote>
-<p>这是一个链接<a href="https://sunmengxin.cn">我的博客</a><br>直接使用链接 &lt;<a href="http://www.sunmengxin.cn>" target="_blank" rel="noopener">www.sunmengxin.cn&gt;</a></p>
-<h3 id="1-高级链接"><a href="#1-高级链接" class="headerlink" title="1. 高级链接"></a>1. 高级链接</h3><p>链接用变量替代,并在文章末尾加变量</p>
-<blockquote>
-<p>用’x’代替网址[Google][x]<br>变量用中括号括起来[BLOG][blog]</p>
-<p>[x]: <a href="http://www.google.com" target="_blank" rel="noopener">www.google.com</a><br>[blog]: <a href="https://sunmengxin.cn">https://sunmengxin.cn</a></p>
-</blockquote>
-<p>用’x’代替网址 <a href="www.google.com">Google</a><br>变量用中括号括起来 <a href="https://sunmengxin.cn">BLOG</a> </p>
-<blockquote>
-<p>HTML &lt;a href=”超链接地址” title=”超链接title”&gt;超链接显示名&lt;/a&gt;</p>
-</blockquote>
-<h2 id="七-图片"><a href="#七-图片" class="headerlink" title="七. 图片"></a>七. 图片</h2><blockquote>
-<p>![alt 属性文本替代文字] （ 图片地址， “可选标题” ）</p>
-</blockquote>
-<p><a href="logo"><img src="https://s2.ax1x.com/2020/02/13/1q4zjI.jpg" alt="头像"></a></p>
-<p>网址使用变量  </p>
-<blockquote>
-<p>![头像][img]<br><br><br>[img]: <a href="https://sunmengxin.cn">https://sunmengxin.cn</a></p>
-</blockquote>
-<p>用HTML格式：  </p>
-<blockquote>
-<p>&lt;img src=”图片链接” alt=”图片alt” title=”图片title”&gt;  </p>
-</blockquote>
-<h2 id="八-表格"><a href="#八-表格" class="headerlink" title="八. 表格"></a>八. 表格</h2><blockquote>
-<p>|  表头   | 表头  |<br>|  —-  | —-  |<br>| 单元格  | 单元格 |<br>| 单元格  | 单元格 |</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>表头</th>
-<th>表头</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>单元格</td>
-<td>单元格</td>
-</tr>
-<tr>
-<td>单元格</td>
-<td>单元格</td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>| 左对齐 | 右对齐 | 居中对齐 |<br>| :—–| —-: | :—-: |<br>| 单元格 | 单元格 | 单元格 |<br>| 单元格 | 单元格 | 单元格 | </p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th align="left">左对齐</th>
-<th align="right">右对齐</th>
-<th align="center">居中对齐</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">单元格</td>
-<td align="right">单元格</td>
-<td align="center">单元格</td>
-</tr>
-<tr>
-<td align="left">单元格</td>
-<td align="right">单元格</td>
-<td align="center">单元格</td>
-</tr>
-</tbody></table>
-<p>任务列表  </p>
-<blockquote>
-<p>- [x] 洗碗<br>- [ ] 清洗油烟机<br>- [ ] 拖地</p>
-</blockquote>
-<ul>
-<li><input checked="" disabled="" type="checkbox"> 洗碗</li>
-<li><input disabled="" type="checkbox"> 清洗油烟机</li>
-<li><input disabled="" type="checkbox"> 拖地</li>
-</ul>
-<h2 id="九-高级技巧"><a href="#九-高级技巧" class="headerlink" title="九. 高级技巧"></a>九. 高级技巧</h2><blockquote>
-<p>目前支持的 HTML 元素有：&lt;kbd&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;等 </p>
-</blockquote>
-<blockquote>
-<p>使用 &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;Del&lt;/kbd&gt; 重启电脑 </p>
-</blockquote>
-<p>使用 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd> 重启电脑  </p>
-<p>反斜杠转义</p>
-<blockquote>
-<p>  \   反斜线<br>    `   反引号<br>    *   星号<br>    _   下划线<br>    {}  花括号<br>    []  方括号<br>    ()  小括号<br>    #   井字号<br>    +   加号<br>    -   减号<br>    .   英文句点<br>    !   感叹号</p>
-</blockquote>
-<h3 id="1-公式"><a href="#1-公式" class="headerlink" title="1. 公式"></a>1. 公式</h3><p><img src="https://s2.ax1x.com/2020/02/14/1jyIHS.png" alt=""></p>
-<p>$${^i_{i-1}}T = Rot(x_{i-1}, \alpha_{i-1}) \cdot Trans(x_{i-1},a_i) \cdot Rot(z_i, \theta_i) \cdot Trans(z_i, d_i)$$</p>
-<p>行内公式：<br>两边仅保留一个美元符号$a=1$。</p>
-<h3 id="2-内嵌图标"><a href="#2-内嵌图标" class="headerlink" title="2. 内嵌图标"></a>2. 内嵌图标</h3><p><i class="icon-file"></i>  新建文档  </p>
-<p><a href="https://github.com/MM-X" target="_blank" rel="noopener"><i class="fab fa-github"></i></a> 点击图标进入GitHub<br><i class="fas fa-blog"></i><br>更多的图标和玩法可以参看 <a href="http://fortawesome.github.io/Font-Awesome/3.2.1/icons/" target="_blank" rel="noopener">font-awesome</a> 官方网站</p>
-<h3 id="3-emoji表情"><a href="#3-emoji表情" class="headerlink" title="3. emoji表情"></a>3. emoji表情</h3><p>使用格式<code>:emoji:</code>的格式，详细列表可参考：<br><a href="https://www.webpagefx.com/tools/emoji-cheat-sheet/" target="_blank" rel="noopener">https://www.webpagefx.com/tools/emoji-cheat-sheet/</a></p>
-<blockquote>
-<dl><dt>: smile :<br>: kissing_hear :</dt><dd>beer :</dd></dl></blockquote>
-<p><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8">😄</span><br><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f618.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f618.png?v8">😘</span><br><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f37a.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f37a.png?v8">🍺</span>  </p>
-<h3 id="4-背景色"><a href="#4-背景色" class="headerlink" title="4. 背景色"></a>4. 背景色</h3><blockquote>
-<p>&lt;table&gt;&lt;tr&gt;&lt;td bgcolor=Green&gt;背景色是：orange&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</p>
-</blockquote>
-<table><tbody><tr><td bgcolor="Green">背景色是：Green</td></tr></tbody></table>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  对于编写<code>Arduino</code>程序的小伙伴，<code>Arduino IDE</code>虽然简单易上手，但当代码量提高或者想查看源码定义时就显得力不从心，因此找到一款能够代替<code>Arduino ID</code>E的编辑器就很有必要。能够支持<code>Arduino</code>的编辑器有很多，像之前的<code>Visual Studio</code>，<code>GitHub</code>的<code>Atom</code>以及微软的<code>VScode</code>等。这里我们选择<code>VScode</code>，它轻量且很多插件，比较为大家所熟知。<br>  <code>VScode</code>编辑<code>Arduino</code>程序支持<strong>代码高亮，代码补全，转到定义，文件跳转</strong>等，对于提高敲代码速度以及查看源码或者库文件实乃必备工具。而且<code>VScode</code>可以跨平台使用，<code>Windows</code>，<code>MAC</code>，<code>Linux</code>都支持。</p>
+<p>话不多说，先看效果：<br><img src="https://img-blog.csdnimg.cn/202002151243131.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt="VScode中的界面"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200215124535290.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt="Arduino中的界面"></p>
+<h2 id="1-Arduino-IDE的安装与使用"><a href="#1-Arduino-IDE的安装与使用" class="headerlink" title="1.Arduino IDE的安装与使用"></a>1.Arduino IDE的安装与使用</h2><p>  由于这些编辑器还是要依赖<code>Arduino IDE</code>，首先安装<code>Arduino IDE</code>和<code>VScode</code>。先进入<code>Arduino</code>的<a href="https://www.arduino.cc/en/Main/Software" target="_blank" rel="noopener">官网</a>，下载<code>Windows Installer</code>安装版本,然后默认安装就行，有问题可以参考其他的安装教程。安装完成后将<code>Arduino IDE</code>加入到环境变量（这一步可以先跳过，到后面有问题再来配置也不迟），<code>我的电脑</code>右键-&gt;<code>属性</code>-&gt;<code>高级系统设置</code>-&gt;<code>环境变量</code>-&gt;新建一个叫<code>ARDUINO</code>的系统变量-&gt;值改成你的安装路径:<br><img src="https://img-blog.csdnimg.cn/20200215130034691.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>添加第三方开发板，<code>文件</code>-&gt;<code>首选项</code>-&gt;<code>附加开发板</code>：<br><img src="https://img-blog.csdnimg.cn/20200215130438601.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>  点击图中<a href="https://github.com/arduino/Arduino/wiki/Unofficial-list-of-3rd-party-boards-support-urls" target="_blank" rel="noopener">红圈链接</a>进入开发板链接网站，然后把相应的链接粘贴到Arduino IDE的白框，每行一个：<br><img src="https://img-blog.csdnimg.cn/20200215130941622.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>然后在<code>Arduino IDE里工具</code>-&gt;<code>开发板</code>-&gt;<code>开发板管理</code>：<br><img src="https://img-blog.csdnimg.cn/20200215131152301.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>  搜索<code>esp8266</code>即可，如果下面进度条迟迟加载不出来（原因你懂的），可以换下网络多试几遍（可能需要任务管理器结束任务），也可以挂代理，会比较快。<br><img src="https://img-blog.csdnimg.cn/2020021513131419.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""></p>
+<h2 id="2-VScode的安装与使用"><a href="#2-VScode的安装与使用" class="headerlink" title="2.VScode的安装与使用"></a>2.VScode的安装与使用</h2><p>  进入<a href="https://code.visualstudio.com/download" target="_blank" rel="noopener">官网</a>下载相应的安装版本,默认安装就行，别忘<strong>勾选添加路径</strong>。然后进入<code>VScode</code>添加一些插件，需要什么插件搜索就行，可以参考下我的：<br><img src="https://img-blog.csdnimg.cn/2020021513215291.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>  然后做一些设置，主界面-&gt;<code>文件</code>-&gt;<code>首选项</code>-&gt;<code>设置</code>，点击右上角按钮进入<code>settings.json</code>:<br><img src="https://img-blog.csdnimg.cn/20200215132538855.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>做如下设置：</p>
+<pre class="line-numbers language-json"><code class="language-json">    <span class="token property">"arduino.path"</span><span class="token operator">:</span> <span class="token string">"C:\\Program Files (x86)\\Arduino"</span><span class="token punctuation">,</span>
+    <span class="token property">"C_Cpp.intelliSenseEngine"</span><span class="token operator">:</span> <span class="token string">"Tag Parser"</span><span class="token punctuation">,</span>
+    <span class="token property">"editor.insertSpaces"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"files.autoGuessEncoding"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"arduino.logLevel"</span><span class="token operator">:</span> <span class="token string">"info"</span><span class="token punctuation">,</span>
+    <span class="token property">"explorer.confirmDelete"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">"editor.detectIndentation"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://img-blog.csdnimg.cn/20200215132839797.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>  其中<code>Arduino IDE</code>的安装位置根据实际情况改动，<kbd>ctrl</kbd>+<kbd>s</kbd>保存即可。然后文件-&gt;打开文件夹，选中你存放Arduino程序的<strong>文件夹</strong>，注意是文件夹，不是里面的<code>.ino</code>文件。然后点击页面底部相应按钮选择开发板，编译，上传（右上角）即可：<br><img src="https://img-blog.csdnimg.cn/20200215133613970.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""></p>
+<h2 id="3-解决VScode编译Arduino程序速度慢的问题"><a href="#3-解决VScode编译Arduino程序速度慢的问题" class="headerlink" title="3.解决VScode编译Arduino程序速度慢的问题"></a>3.解决VScode编译Arduino程序速度慢的问题</h2><p><img src="https://img-blog.csdnimg.cn/20200215134740202.png" alt=""><br>  编译时可以看到<code>VScode</code>有<code>Warning</code>警告，此时我们只需在当前项目的<code>.vscode</code> -&gt; <code>arduino.json</code>文件中将输出目录 <code>output</code> 配置一下就可以大大提高二次下载的编译速度，<strong>注意json的格式</strong>，什么时候末尾该有逗号。</p>
+<pre class="line-numbers language-json"><code class="language-json"><span class="token punctuation">{</span>
+    <span class="token property">"board"</span><span class="token operator">:</span> <span class="token string">"esp8266:esp8266:generic"</span><span class="token punctuation">,</span>
+    <span class="token property">"configuration"</span><span class="token operator">:</span> <span class="token string">"xtal=80,vt=flash,......省略一些"</span><span class="token punctuation">,</span>
+    <span class="token property">"programmer"</span><span class="token operator">:</span> <span class="token string">"AVR ISP"</span><span class="token punctuation">,</span>
+    <span class="token property">"output"</span><span class="token operator">:</span> <span class="token string">"./build"</span><span class="token punctuation">,</span>
+    <span class="token property">"sketch"</span><span class="token operator">:</span> <span class="token string">"Wifi_Scan.ino"</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="4-VScode中的Git使用"><a href="#4-VScode中的Git使用" class="headerlink" title="4.VScode中的Git使用"></a>4.VScode中的Git使用</h2><p>  关于<code>Git</code>的使用和总结可以参考我的<a href="https://sunmengxin.cn/Git-tutorial/">Git教程学习笔记及VScode中Git使用</a>。打开<code>VScode</code>：<code>文件-&gt;首选项-&gt;设置</code>，然后点击图中<code>红圈</code>里的按钮：<br><img src="https://img-blog.csdnimg.cn/20200214213620479.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>  在设置里添加以下两句，其中第一句添加git安装位置（确保安装git时勾选添加到系统变量），第二局将<code>VScode</code>中的终端换成默认<code>Git Bash</code>。</p>
+<pre class="line-numbers language-json"><code class="language-json"><span class="token property">"git.path"</span><span class="token operator">:</span> <span class="token string">"C:\\Program Files\\Git\\cmd\\git.exe"</span><span class="token punctuation">,</span>
+<span class="token property">"terminal.integrated.shell.windows"</span><span class="token operator">:</span> <span class="token string">"C:\\Program Files\\Git\\bin\\bash.exe"</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>然后用快捷键<kbd>Ctrl</kbd>+<kbd>~</kbd>打开终端输入<code>git init</code>：</p>
+<pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">git</span> init
+Initialized empty Git repository <span class="token keyword">in</span> C:/Users/MengXin/Desktop/ESP/ESP8266/code/test_hardwarw/.git/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>  然后点击<code>新建文件</code>，输入文件名<code>.gitignore</code>，确定让Git跟踪哪些文件，忽略哪些文件，有关详细用法可参考<a href="https://git-scm.com/book/zh/v2" target="_blank" rel="noopener">Git官方中文教程</a>。</p>
+<pre><code>    build/
+    .vscode/*
+    !.vscode/arduino.json</code></pre><p><img src="https://img-blog.csdnimg.cn/20200215142835115.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>  输入后<code>ctrl</code>+<code>s</code>保存，然后左侧<code>源代码管理</code>-&gt;右上角三个点<code>更多操作</code>-&gt;<code>暂存所有更改</code>-&gt;<code>全部提交</code>-&gt;<code>输入提交信息</code>，例如我的信息<code>第一次提交代码</code>，然后在终端输入<code>git log</code>即可查看信息；这几步相当于Git命令中的：</p>
+<pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">git</span> add <span class="token keyword">.</span>
+$ <span class="token function">git</span> commit -m <span class="token string">"第一次提交代码"</span>
+$ <span class="token function">git</span> log
+  commit 8a636c62040cdc7897f90766636943c6ddc8af19 <span class="token punctuation">(</span>HEAD -<span class="token operator">></span> master<span class="token punctuation">)</span>
+  Author: MM-X <span class="token operator">&lt;</span>smx******@gmail.com<span class="token operator">></span>
+  Date:   Sat Feb 15 14:37:58 2020 +0800
 
-<h3 id="5-锚点"><a href="#5-锚点" class="headerlink" title="5. 锚点"></a>5. 锚点</h3><p>相当于同一篇文章里的超级链接</p>
-<blockquote>
-<p>1.定义一个锚(id)：<table><tbody><tr><td bgcolor="YellowGreen">&lt;span id=”jump”&gt;跳转到的地方&lt;/span&gt;</td></tr></tbody></table><br>2.使用markdown语法：[点击跳转]（#jump）</p>
-</blockquote>
-<p>跳转到<a href="#jump">开头</a></p>
-<br>
-<br>
-
-<p><strong>注：</strong>在线Markdown编辑器<a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="noopener">https://www.zybuluo.com/mdeditor</a></p>
-<br>
-
+    第一次提交代码<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://img-blog.csdnimg.cn/20200215143104710.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br><img src="https://img-blog.csdnimg.cn/20200215143319154.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""></p>
+<h2 id="5-Git中文显示乱码问题"><a href="#5-Git中文显示乱码问题" class="headerlink" title="5.Git中文显示乱码问题"></a>5.Git中文显示乱码问题</h2><p>  在桌面空白<code>右击</code>-&gt;<code>Git Bash Here</code>-&gt;<code>在弹出框右击</code>-&gt;<code>Options</code>-&gt;<code>Text</code>，做如下设置即可。<br><img src="https://img-blog.csdnimg.cn/20200215144319996.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br><br><br><br><br><strong>参考：</strong><br>  <a href="https://www.arduino.cn/thread-81253-1-1.html" target="_blank" rel="noopener"> ESP32使用blinker库的arduino IDE上手教程,升级vscode教程,git教程</a><br>  <a href="https://sunmengxin.cn/Git-tutorial/">Git教程学习笔记及VScode中Git使用</a><br>  <a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">廖雪峰的Git教程</a></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -795,7 +568,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://sunmengxin.cn/markdown-tutorial/">https://sunmengxin.cn/markdown-tutorial/</a>
+                    <a href="https://sunmengxin.cn/vscode-replace-arduino/">https://sunmengxin.cn/vscode-replace-arduino/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -833,16 +606,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Markdown/">
-                                    <span class="chip bg-color">Markdown</span>
-                                </a>
-                            
-                                <a href="/tags/%E5%B7%A5%E5%85%B7/">
-                                    <span class="chip bg-color">工具</span>
-                                </a>
-                            
                                 <a href="/tags/%E5%8E%9F%E5%88%9B/">
                                     <span class="chip bg-color">原创</span>
+                                </a>
+                            
+                                <a href="/tags/VScode/">
+                                    <span class="chip bg-color">VScode</span>
+                                </a>
+                            
+                                <a href="/tags/Arduino/">
+                                    <span class="chip bg-color">Arduino</span>
                                 </a>
                             
                         </div>
@@ -1013,7 +786,7 @@
         repo: 'MM-X.github.io',
         owner: 'MM-X',
         admin: "MM-X",
-        id: '2020-02-14T18-43-09',
+        id: '2020-02-15T15-16-09',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1034,9 +807,67 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/vscode-replace-arduino/">
+                    <div class="card-image">
+                        
+                        <img src="https://s2.ax1x.com/2020/02/15/1xgBHP.png" class="responsive-img" alt="VScode代替Arduino IDE实现代码补全文件跳转（详细）">
+                        
+                        <span class="card-title">VScode代替Arduino IDE实现代码补全文件跳转（详细）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            VScode代替Arduino IDE
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-15
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                    工具
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%8E%9F%E5%88%9B/">
+                        <span class="chip bg-color">原创</span>
+                    </a>
+                    
+                    <a href="/tags/VScode/">
+                        <span class="chip bg-color">VScode</span>
+                    </a>
+                    
+                    <a href="/tags/Arduino/">
+                        <span class="chip bg-color">Arduino</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/Git-tutorial/">
                     <div class="card-image">
@@ -1053,9 +884,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1081,62 +912,6 @@
                     
                     <a href="/tags/VSCode/">
                         <span class="chip bg-color">VSCode</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/how-to-learn-robotics/SUMMARY/">
-                    <div class="card-image">
-                        
-                        <img src="https://s2.ax1x.com/2020/01/02/lNmbTJ.jpg" class="responsive-img" alt="机器人学习之路">
-                        
-                        <span class="card-title">机器人学习之路</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            大牛们的机器人学习之路！
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-02
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" class="post-category">
-                                    学习方法
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E6%9C%BA%E6%A2%B0%E5%B7%A5%E7%A8%8B/">
-                        <span class="chip bg-color">机械工程</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/">
-                        <span class="chip bg-color">学习方法</span>
-                    </a>
-                    
-                    <a href="/tags/%E8%BD%AC%E8%BD%BD/">
-                        <span class="chip bg-color">转载</span>
                     </a>
                     
                 </div>
@@ -1310,13 +1085,6 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 </main>
 
-
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
 
 
 
