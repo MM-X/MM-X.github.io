@@ -5,11 +5,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Git教程学习笔记及VScode中Git使用, 孙孟鑫,sunmengxin,mengxin,孟鑫,机电一体化,机器人">
+    <meta name="keywords" content="VMware15安装MAC OS10.14（新版详细）, 孙孟鑫,sunmengxin,mengxin,孟鑫,机电一体化,机器人">
     <meta name="baidu-site-verification" content="wGFMStAFna" />
     <meta name="google-site-verification" content="aSdRqh383jhnQe6RPmd5mkt5UZMXUC1Z_tNs2cLpsyE" />
     <meta name="360-site-verification" content="" />
-    <meta name="description" content="Git教程学习笔记">
+    <meta name="description" content="VMware15安装MAC OS10.14">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Git教程学习笔记及VScode中Git使用 | MengXin</title>
+    <title>VMware15安装MAC OS10.14（新版详细） | MengXin</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -298,12 +298,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.ax1x.com/2020/02/14/1vicIP.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Git教程学习笔记及VScode中Git使用</h1>
+                    <h1 class="description center-align post-title">VMware15安装MAC OS10.14（新版详细）</h1>
                 </div>
             </div>
         </div>
@@ -420,16 +420,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Git/">
-                                <span class="chip bg-color">Git</span>
-                            </a>
-                        
-                            <a href="/tags/VSCode/">
-                                <span class="chip bg-color">VSCode</span>
-                            </a>
-                        
                             <a href="/tags/%E5%8E%9F%E5%88%9B/">
                                 <span class="chip bg-color">原创</span>
+                            </a>
+                        
+                            <a href="/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/">
+                                <span class="chip bg-color">虚拟机</span>
+                            </a>
+                        
+                            <a href="/tags/MAC-OS/">
+                                <span class="chip bg-color">MAC OS</span>
                             </a>
                         
                     </div>
@@ -440,8 +440,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
-                                工具
+                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
+                                教程
                             </a>
                         
                     </div>
@@ -453,7 +453,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-14
+                    2020-02-20
                 </div>
                 
 
@@ -469,7 +469,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    5 分
                 </div>
                 
 				
@@ -485,108 +485,29 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  一直想学git,奈何初学时相关的新名词太多，一直没理解太深，刚好最近有时间把<a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">廖雪峰的git教程</a>看了一遍，峰哥的教程写的很通俗易懂有条理就不说了。但细数起来，git的命令还是有点多的，就在学的同时记了些笔记分享一下。<br>  对于新手，非常建议学习git之前，先把GitHub玩一遍，这里也推荐一个GitHub学习相关的网站，写的也很通俗易懂——<a href="https://gitbeijing.com/" target="_blank" rel="noopener">Git北京</a>。</p>
-<h2 id="1-配置git"><a href="#1-配置git" class="headerlink" title="1.配置git"></a>1.配置git</h2><pre><code>$ git config --global user.name "Your Name"  配置git全局用户名
-$ git config --global user.email "email@example.com"  配置git全局邮箱
-$ git config --global credential.helper store  保存登录密码</code></pre><h2 id="2-创建版本库"><a href="#2-创建版本库" class="headerlink" title="2.创建版本库"></a>2.创建版本库</h2><pre><code>$ mkdir learngit
-$ cd learngit
-$ pwd
-$ git init
-$ git add readme.txt
-$ git add readme.txt</code></pre><h2 id="3-版本回退"><a href="#3-版本回退" class="headerlink" title="3.版本回退"></a>3.版本回退</h2><pre><code>$ git status
-$ git diff readme.txt
-
-$ git log （--pretty=oneline）
-$ git reset --hard HEAD^
-$ git reflog 记录git的每次命令</code></pre><h2 id="4-工作区和暂存区"><a href="#4-工作区和暂存区" class="headerlink" title="4.工作区和暂存区"></a>4.工作区和暂存区</h2><pre><code>Git管理的文件分为：工作区，版本库；版本库又分为暂存区stage和暂存区分支master(仓库)
-
-工作区&gt;&gt;&gt;&gt;暂存区&gt;&gt;&gt;&gt;仓库
-git add把文件从工作区&gt;&gt;&gt;&gt;暂存区；
-git commit把文件从暂存区&gt;&gt;&gt;&gt;仓库，
-git diff查看工作区和暂存区差异，
-git diff HEAD -- filename 查看暂存区和仓库差异，
-git diff HEAD 查看工作区和仓库的差异，
-git checkout类似git add反向命令，指对工作区的操作
-git reset HEAD类似git commit反向命令，指对缓存区的操作
-
-$ git diff HEAD -- readme.txt 
-$ git reset HEAD readme.txt  缓存区的修改撤销放回工作区
-$ git checkout -- readme.txt  丢弃工作区的修改</code></pre><h2 id="5-添加远程仓库"><a href="#5-添加远程仓库" class="headerlink" title="5.添加远程仓库"></a>5.添加远程仓库</h2><pre><code>$ ssh-keygen -t rsa -C "youremail@example.com"
-$ git remote add origin git@github.com:michaelliao/learngit.git
-$ git push -u origin master  加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来
-$ git push origin master
-
-$ git clone git@github.com:michaelliao/gitskills.git</code></pre><h2 id="6-分支管理"><a href="#6-分支管理" class="headerlink" title="6.分支管理"></a>6.分支管理</h2><pre><code>$ git checkout -b dev
-$ git branch dev  创建分支
-$ git checkout dev
-$ git branch 查看当前分支
-
-$ git checkout master
-$ git merge dev
-$ git branch -d dev 删除
-&amp; git branch -D &lt;name&gt;强行删除。
-$ git branch
-$ git switch -c dev
-$ git switch master
-$ git merge --abort  有冲突时放弃merge
-
-$ git log --graph --pretty=oneline --abbrev-commit   按行显示 缩写
-
-强制禁用fast forward,防止删除分支后丢掉分支部分
-$ git merge --no-ff -m "merge with no-ff" dev</code></pre><h3 id="6-1、处理bug分支"><a href="#6-1、处理bug分支" class="headerlink" title="6.1、处理bug分支"></a>6.1、处理bug分支</h3><pre><code>    $ git stash  压入存储区
-    $ git stash list 查看存储区
-    $ git stash apply &amp;&amp; $ git stash drop 恢复删除临时区
-    $ git stash pop  同上
-    $ git cherry-pick 4c805e2  将master的修改操作复制到当前分支
-
-    $ git stash apply stash@{0}</code></pre><h3 id="6-2、多人协作"><a href="#6-2、多人协作" class="headerlink" title="6.2、多人协作"></a>6.2、多人协作</h3><pre><code>    $ git remote 查看远程仓库名称
-    $ git remote -v  查看远程仓库信息
-    $ git push origin master  推送master分支
-    $ git push origin dev  推送dev分支
-
-    $ git clone git@github.com:michaelliao/learngit.git  抓取分支
-    $ git checkout -b dev origin/dev  创建远程origin的dev分支到本低
-    $ git pull 把最新的提交从origin/dev抓下来
-    $ git branch --set-upstream-to=origin/dev dev  设置dev和origin/dev的链接：
-    $ git commit -m "fix env conflict"
-    $ git push origin dev
-
-    $ git rebase  原本分叉的提交现在变成一条直线</code></pre><h2 id="7-标签管理"><a href="#7-标签管理" class="headerlink" title="7.标签管理"></a>7.标签管理</h2><pre><code>$ git tag v1.0  给当前版本打标签
-$ git tag 显示已有标签
-$ git log --pretty=oneline --abbrev-commit
-$ git tag v0.9 f52c633 对历史节点打标签
-$ git show v0.9 显示版本信息
-$ git tag -a v0.1 -m "version 0.1 released" 1094adb  带说明的标签
-$ git tag -d v0.1 删除标签
-$ git push origin v1.0  推送某个标签到远程
-$ git push origin --tags  一次性推送全部尚未推送到远程的本地标签
-$ git tag -d v0.9 &gt;&gt; $ git push origin :refs/tags/v0.9  删除远程标签  $ git push origin --delete  tagname</code></pre><h2 id="8-自定义git"><a href="#8-自定义git" class="headerlink" title="8.自定义git"></a>8.自定义git</h2><pre><code>$ git config --global color.ui true   Git显示颜色
-忽略文件 .gitignore 文件 https://github.com/github/gitignore
-
-$ git add -f App.class 强制添加
-$ git check-ignore -v App.class
-
-$ git config --global alias.st status
-$ git config --global alias.co checkout
-$ git config --global alias.ci commit
-$ git config --global alias.br branch
-$ git config --global alias.last 'log -1'  用git last就能显示最近一次的提交
-git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset' --abbrev-commit"
-每个仓库的Git配置文件都放在.git/config文件中</code></pre><h2 id="9-VScode中的Git使用"><a href="#9-VScode中的Git使用" class="headerlink" title="9.VScode中的Git使用"></a>9.VScode中的Git使用</h2><p>  VScode的安装这里就不多说了，打开VScode：<code>文件-&gt;首选项-&gt;设置</code>，然后点击图中<code>红圈</code>里的按钮：<br><img src="https://img-blog.csdnimg.cn/20200214213620479.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>  在设置里添加以下两句，其中第一句添加git安装位置（确保安装git时勾选添加到系统变量），第二局将VScode中的终端换成默认<code>Git Bash</code>。</p>
-<pre class="line-numbers language-json"><code class="language-json"><span class="token property">"git.path"</span><span class="token operator">:</span> <span class="token string">"C:\\Program Files\\Git\\cmd\\git.exe"</span><span class="token punctuation">,</span>
-<span class="token property">"terminal.integrated.shell.windows"</span><span class="token operator">:</span> <span class="token string">"C:\\Program Files\\Git\\bin\\bash.exe"</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>  然后用VScode打开练习Git的文件夹，<kbd>Ctrl</kbd>+<kbd>~</kbd>打开终端输入<code>git status</code>：</p>
-<pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">git</span> status 
-On branch master
-Your branch is up to <span class="token function">date</span> with <span class="token string">'origin/master'</span><span class="token keyword">.</span>
-
-Changes not staged <span class="token keyword">for</span> commit:
-  <span class="token punctuation">(</span>use <span class="token string">"git add &lt;file>..."</span> to update what will be committed<span class="token punctuation">)</span>
-  <span class="token punctuation">(</span>use <span class="token string">"git checkout -- &lt;file>..."</span> to discard changes <span class="token keyword">in</span> working directory<span class="token punctuation">)</span>
-
-        modified:   <span class="token string">"git\346\200\273\347\273\223.txt"</span>
-
-no changes added to commit <span class="token punctuation">(</span>use <span class="token string">"git add"</span> and/or <span class="token string">"git commit -a"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  一直想搞个黑苹果玩玩，奈何黑苹果双系统的操作步骤太过复杂，就决定先装个虚拟机体验一下。之前不想在Windows和Ubuntu之间来回切换系统，也曾用虚拟机装过Ubuntu。虚拟机的好处就是方便且易于复制，但缺点也很明显，依附于Windows系统，不能享用电脑硬件的100%的硬件资源。</p>
+<p>效果如下：<br><img src="https://img-blog.csdnimg.cn/20200220114655114.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""></p>
+<h2 id="1-工具准备"><a href="#1-工具准备" class="headerlink" title="1.工具准备"></a>1.工具准备</h2><ul>
+<li>VMware15</li>
+<li>unlocker解锁工具（可能需要Python环境，我之前安装过Python3.7）</li>
+<li>MAC OS Mojave 10.14懒人版</li>
+</ul>
+<p>安装所需的软件<a href="https://pan.baidu.com/s/1mvDbcvaLtUz3eXQ6tYVRrg" target="_blank" rel="noopener">https://pan.baidu.com/s/1mvDbcvaLtUz3eXQ6tYVRrg</a>;密码<code>8tc8</code>。</p>
+<h2 id="2-安装VMware15"><a href="#2-安装VMware15" class="headerlink" title="2.安装VMware15"></a>2.安装VMware15</h2><p>  双击安装包里的<code>VMware-workstation-full-15.0.0-10134415.exe</code>，按照引导安装完程序，可更换安装位置，安装完成后输入激活码<code>YG5H2-ANZ0H-M8ERY-TXZZZ-YKRV8</code>。打开查看激活情况：<br><img src="https://img-blog.csdnimg.cn/2020022011535067.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""></p>
+<h2 id="3-使用unlocker解锁VMware里的MAC-OS选项"><a href="#3-使用unlocker解锁VMware里的MAC-OS选项" class="headerlink" title="3.使用unlocker解锁VＭware里的MAC OS选项　"></a>3.使用unlocker解锁VＭware里的MAC OS选项　</h2><p>VＭware默认没有MAC的选项，需要使用<code>unlocker</code>解锁：<br>1.关闭 <code>VMware Workstation Pro</code>，关闭 <code>VMware</code> 服务：<br><img src="https://img-blog.csdnimg.cn/20200220120012899.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>2.把下载好的 <code>unlocker</code> 解压到不含中文目录的路径，<strong>管理员模式</strong>下运行 <code>win-install.cmd</code> 安装：<br><img src="https://img-blog.csdnimg.cn/20200220120222837.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>这个脚本文件会自动解锁<code>VMware</code>,接下来就能进行正式操作了 :sunglasses:  </p>
+<h2 id="4-创建虚拟机安装MAC-OS"><a href="#4-创建虚拟机安装MAC-OS" class="headerlink" title="4.创建虚拟机安装MAC OS"></a>4.创建虚拟机安装MAC OS</h2><p>1.打开 <code>VMware</code> ，创建新虚拟机，选择<code>典型</code><br><img src="https://img-blog.csdnimg.cn/20200220120806662.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>2.选择第二个安装程序光盘影响文件：<br><img src="https://img-blog.csdnimg.cn/20200220121022117.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>3.浏览到相应目录，右下角选择所有文件，选择相应的<code>.cdr</code>文件：<br><img src="https://img-blog.csdnimg.cn/20200220120928760.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>4.选择<code>Apple Mac</code>和相应的版本，版本要对应：<br><img src="https://img-blog.csdnimg.cn/20200220121346559.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>5.填写名称和安装路径（选择英文路径）：<br><img src="https://img-blog.csdnimg.cn/20200220121531446.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>6.大小默认即可，下面选项建议选择第一个：<br><img src="https://img-blog.csdnimg.cn/20200220121811118.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>7.硬件资源可根据需求调整，也可以之后调整：<br><img src="https://img-blog.csdnimg.cn/20200220122032690.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>8.确定后不要急着打开虚拟机，找到刚才虚拟机系统文件路径下的<code>MAC OS 10.14.vmx</code>，用记事本打开，在 <code>smc.present = "TRUE"</code>后添加（<code>smc.version = "0"</code>）(建议您复制，不包括括号) 后保存。<br><img src="https://img-blog.csdnimg.cn/20200220122424524.png" alt=""><br>9.打开虚拟机，等待进度条加载完毕:<br><img src="https://img-blog.csdnimg.cn/20200220122533219.png" alt=""><br>10.语言选择简体中文，同意条款，继续安装；直到显示没有足够空间，点击屏幕上方的 “<code>实用工具</code> -&gt; <code>磁盘工具</code>”。选中 “ <code>vmware workstation SATA hard drive media</code> ”，点击 “抹掉”。<br><img src="https://img-blog.csdnimg.cn/20200220123102272.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>11.退出 “磁盘工具”，再次进行安装，此时选择新出现的分区，开始安装，<br><img src="https://img-blog.csdnimg.cn/20200220123447831.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>12.待安装完成，国家选择中国，键盘选择简体中文，不传输信息，<code>apple id</code>稍后设置，创建用户名和密码。<br><img src="https://img-blog.csdnimg.cn/20200220123537934.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>13.全部设置完毕即可进入系统，进入桌面右击右上角光盘图标，选择<code>推出XXX</code>：<br><img src="https://img-blog.csdnimg.cn/2020022012415219.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""></p>
+<h2 id="5-安装VMware-Tools"><a href="#5-安装VMware-Tools" class="headerlink" title="5.安装VMware Tools"></a>5.安装VMware Tools</h2><p>1.下载<code>VMTool(New).iso</code>，链接<a href="https://pan.baidu.com/s/1eFOodlbLAfhWuUD8gPV5XA" target="_blank" rel="noopener">https://pan.baidu.com/s/1eFOodlbLAfhWuUD8gPV5XA</a>,密码<code>ow6i</code>，进入VMware点击右下角光盘形状按钮，点击设置：<br><img src="https://img-blog.csdnimg.cn/2020022012394494.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>2.点击<code>CD/DVD</code>,点击浏览，选择刚刚下载的<code>.iso</code>文件，确定：<br><img src="https://img-blog.csdnimg.cn/20200220131320674.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>3.再次进入VMware点击右下角光盘形状按钮，点击<strong>连接</strong>，点击安装<code>VMware Tools</code>：<br><img src="https://img-blog.csdnimg.cn/20200220131921352.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>4.安装过程弹出权限需求，选择允许：<br><img src="https://img-blog.csdnimg.cn/20200220132109849.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""></p>
+<h2 id="6-解决App-Store无法登录使用问题："><a href="#6-解决App-Store无法登录使用问题：" class="headerlink" title="6.解决App Store无法登录使用问题："></a>6.解决App Store无法登录使用问题：</h2><p>  此问题的主要原因是没有正确的序列号，而 <code>Apple</code> 会检测此信息，因此我们要解决此问题，只要解决序列号问题即可。<br>1.虚拟机设置网络连接模式为桥接模式:<br><img src="https://img-blog.csdnimg.cn/20200220133510707.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>2.启动虚拟机，然后下载运行 <code>Chameleon Wizard</code>，<a href="https://pan.baidu.com/s/1a-1D5npr2sDtRHpwo5X7ww" target="_blank" rel="noopener">https://pan.baidu.com/s/1a-1D5npr2sDtRHpwo5X7ww</a><br>提取码：<code>g3vg</code>，点击编辑：<br><img src="https://img-blog.csdnimg.cn/20200220132954583.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>3.<code>编辑</code> -&gt; <code>预制的 smbioses 模版</code> -&gt; <code>根据真机的 CPU 型号选个最相近的模版</code>，生成成功后点另存为，导出设备信息文件：<br><img src="https://img-blog.csdnimg.cn/20200220133105265.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>4.关闭虚拟机，编辑虚拟机对应的 <code>macOS 10.14.vmx</code>文件，用前面生成的信息，加入这么几行（cpu差不多的直接复制下面也可）：</p>
+<pre class="line-numbers language-c"><code class="language-c">board<span class="token operator">-</span>id<span class="token punctuation">.</span>reflectHost <span class="token operator">=</span> <span class="token string">"FALSE"</span>
+board<span class="token operator">-</span>id <span class="token operator">=</span> <span class="token string">"Mac-94245B3640C91C81"</span>
+hw<span class="token punctuation">.</span>model<span class="token punctuation">.</span>reflectHost <span class="token operator">=</span> <span class="token string">"FALSE"</span>
+hw<span class="token punctuation">.</span>model <span class="token operator">=</span> <span class="token string">"MacBook Pro"</span>
+serialNumber<span class="token punctuation">.</span>reflectHost <span class="token operator">=</span> <span class="token string">"FALSE"</span>
+serialNumber <span class="token operator">=</span> <span class="token string">"C02JJ8B3DH2G"</span>
+smbios<span class="token punctuation">.</span>reflectHost <span class="token operator">=</span> <span class="token string">"FALSE"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>注意</strong>：如果<code>macOS 10.14.vmx</code> 文件中含有 <code>board-id.reflectHost = "TRUE"</code>之类的字样就把它删掉，之后就可以在App Store尽情下载了。</p>
+<h2 id="7-macOS-10-14-安装允许任何来源没了怎么开启"><a href="#7-macOS-10-14-安装允许任何来源没了怎么开启" class="headerlink" title="7.macOS 10.14 安装允许任何来源没了怎么开启"></a>7.macOS 10.14 安装允许任何来源没了怎么开启</h2><p>点击MAC桌面下方<code>启动台</code>-&gt;<code>其他</code>-&gt;<code>终端</code>：输入<code>sudo spctl --master-disable</code>，输入密码即可。<br><img src="https://img-blog.csdnimg.cn/20200220134049369.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>  <a href="http://www.carrotchou.blog/18689.html" target="_blank" rel="noopener">1.VMware 虚拟机安装 macOS 10.14 教程</a><br>  <a href="https://blog.csdn.net/qq_40147863/article/details/84797618" target="_blank" rel="noopener">2.VMware 15 安装 MAC OS 10.13 原版（详细图文教程）</a><br>  <a href="https://blog.csdn.net/galaxy_yyg/article/details/82891044" target="_blank" rel="noopener">3.VMWare15 安装 Mac OS 系统</a><br>  <a href="https://www.jianshu.com/p/dea92fbf00a4" target="_blank" rel="noopener">4.VMware虚拟机安装macOS系统小结</a><br>  <a href="http://bbs.pcbeta.com/viewthread-1729408-1-1.html" target="_blank" rel="noopener">5.原版系统APP制作DMG系统盘详细过程</a><br>  <a href="http://bbs.pcbeta.com/viewthread-1652838-1-4.html" target="_blank" rel="noopener">6.如何制作自己的macOS系统的cdr懒人包</a><br>  <a href="https://bbs.feng.com/read-htm-tid-10406997.html" target="_blank" rel="noopener">7.制作OS X安装U盘</a><br>  <a href="https://blog.csdn.net/aaron_zhang939/article/details/78616873" target="_blank" rel="noopener">8.VM虚拟机不能上网的问题解决</a><br>  <a href="http://bbs.pcbeta.com/viewthread-1816057-1-1.html" target="_blank" rel="noopener">9.制作VMware Workstation可用的macOS Mojave 10.14.X安装镜像教程</a></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -630,7 +551,7 @@ no changes added to commit <span class="token punctuation">(</span>use <span cla
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://sunmengxin.cn/Git-tutorial/">https://sunmengxin.cn/Git-tutorial/</a>
+                    <a href="https://sunmengxin.cn/vmware15-install-macos/">https://sunmengxin.cn/vmware15-install-macos/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -668,16 +589,16 @@ no changes added to commit <span class="token punctuation">(</span>use <span cla
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Git/">
-                                    <span class="chip bg-color">Git</span>
-                                </a>
-                            
-                                <a href="/tags/VSCode/">
-                                    <span class="chip bg-color">VSCode</span>
-                                </a>
-                            
                                 <a href="/tags/%E5%8E%9F%E5%88%9B/">
                                     <span class="chip bg-color">原创</span>
+                                </a>
+                            
+                                <a href="/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/">
+                                    <span class="chip bg-color">虚拟机</span>
+                                </a>
+                            
+                                <a href="/tags/MAC-OS/">
+                                    <span class="chip bg-color">MAC OS</span>
                                 </a>
                             
                         </div>
@@ -848,7 +769,7 @@ no changes added to commit <span class="token punctuation">(</span>use <span cla
         repo: 'MM-X.github.io',
         owner: 'MM-X',
         admin: "MM-X",
-        id: '2020-02-14T22-08-09',
+        id: '2020-02-20T14-08-09',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1132,9 +1053,68 @@ no changes added to commit <span class="token punctuation">(</span>use <span cla
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/vmware15-install-macos/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="VMware15安装MAC OS10.14（新版详细）">
+                        
+                        <span class="card-title">VMware15安装MAC OS10.14（新版详细）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            VMware15安装MAC OS10.14
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
+                                    教程
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%8E%9F%E5%88%9B/">
+                        <span class="chip bg-color">原创</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/">
+                        <span class="chip bg-color">虚拟机</span>
+                    </a>
+                    
+                    <a href="/tags/MAC-OS/">
+                        <span class="chip bg-color">MAC OS</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/vscode-replace-arduino/">
                     <div class="card-image">
@@ -1151,9 +1131,9 @@ no changes added to commit <span class="token punctuation">(</span>use <span cla
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1179,62 +1159,6 @@ no changes added to commit <span class="token punctuation">(</span>use <span cla
                     
                     <a href="/tags/Arduino/">
                         <span class="chip bg-color">Arduino</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/markdown-tutorial/">
-                    <div class="card-image">
-                        
-                        <img src="https://s2.ax1x.com/2020/02/14/1jyP6P.png" class="responsive-img" alt="Markdown教程">
-                        
-                        <span class="card-title">Markdown教程</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            MarkDown用法总结
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-14
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
-                                    工具
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Markdown/">
-                        <span class="chip bg-color">Markdown</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%8E%9F%E5%88%9B/">
-                        <span class="chip bg-color">原创</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%B7%A5%E5%85%B7/">
-                        <span class="chip bg-color">工具</span>
                     </a>
                     
                 </div>
