@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>MengXin</title>
   
-  <subtitle>Welcome to my blog</subtitle>
+  <subtitle>孟鑫的博客</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sunmengxin.cn/"/>
-  <updated>2020-02-20T06:40:01.481Z</updated>
+  <updated>2020-02-27T15:34:40.762Z</updated>
   <id>https://sunmengxin.cn/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Typora+PicGo+SM.MS图床打造博客神器</title>
+    <link href="https://sunmengxin.cn/Typora-PicGo-Blog/"/>
+    <id>https://sunmengxin.cn/Typora-PicGo-Blog/</id>
+    <published>2020-02-27T15:08:09.000Z</published>
+    <updated>2020-02-27T15:34:40.762Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="博客工具" scheme="https://sunmengxin.cn/categories/%E5%8D%9A%E5%AE%A2%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Typora" scheme="https://sunmengxin.cn/tags/Typora/"/>
+    
+      <category term="图床" scheme="https://sunmengxin.cn/tags/%E5%9B%BE%E5%BA%8A/"/>
+    
+      <category term="原创" scheme="https://sunmengxin.cn/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+  </entry>
   
   <entry>
     <title>VMware15安装MAC OS10.14（新版详细）</title>
@@ -52,7 +83,7 @@
     <link href="https://sunmengxin.cn/vscode-replace-arduino/"/>
     <id>https://sunmengxin.cn/vscode-replace-arduino/</id>
     <published>2020-02-15T07:16:09.000Z</published>
-    <updated>2020-02-16T12:53:25.260Z</updated>
+    <updated>2020-02-27T15:34:31.319Z</updated>
     
     <summary type="html">
     
@@ -101,11 +132,11 @@
       <category term="工具" scheme="https://sunmengxin.cn/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
+      <category term="原创" scheme="https://sunmengxin.cn/tags/%E5%8E%9F%E5%88%9B/"/>
+    
       <category term="Git" scheme="https://sunmengxin.cn/tags/Git/"/>
     
       <category term="VSCode" scheme="https://sunmengxin.cn/tags/VSCode/"/>
-    
-      <category term="原创" scheme="https://sunmengxin.cn/tags/%E5%8E%9F%E5%88%9B/"/>
     
   </entry>
   
