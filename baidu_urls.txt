@@ -1,3 +1,9 @@
+https://sunmengxin.cn/CSCC/05-IO/
+https://sunmengxin.cn/storage-difference/
+https://sunmengxin.cn/CSCC/04-storage/
+https://sunmengxin.cn/CSCC/03-system-bus/
+https://sunmengxin.cn/CSCC/02-computer-composition/
+https://sunmengxin.cn/CSCC/01-introduction/
 https://sunmengxin.cn/Typora-PicGo-Blog/
 https://sunmengxin.cn/vmware15-install-macos/
 https://sunmengxin.cn/vscode-replace-arduino/

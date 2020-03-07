@@ -5,11 +5,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="VScode代替Arduino IDE实现代码补全文件跳转（详细）, 孙孟鑫,sunmengxin,mengxin,孟鑫,机电一体化,机器人">
+    <meta name="keywords" content="计算机组成原理 - 4.存储器, 孙孟鑫,sunmengxin,mengxin,孟鑫,机电一体化,机器人">
     <meta name="baidu-site-verification" content="wGFMStAFna" />
     <meta name="google-site-verification" content="aSdRqh383jhnQe6RPmd5mkt5UZMXUC1Z_tNs2cLpsyE" />
     <meta name="360-site-verification" content="" />
-    <meta name="description" content="VScode代替Arduino IDE">
+    <meta name="description" content="《计算机组成原理》总结第四章">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>VScode代替Arduino IDE实现代码补全文件跳转（详细） | MengXin</title>
+    <title>计算机组成原理 - 4.存储器 | MengXin</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -298,12 +298,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.ax1x.com/2020/02/15/1xgBHP.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">VScode代替Arduino IDE实现代码补全文件跳转（详细）</h1>
+                    <h1 class="description center-align post-title">计算机组成原理 - 4.存储器</h1>
                 </div>
             </div>
         </div>
@@ -424,12 +424,12 @@
                                 <span class="chip bg-color">原创</span>
                             </a>
                         
-                            <a href="/tags/VScode/">
-                                <span class="chip bg-color">VScode</span>
+                            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">
+                                <span class="chip bg-color">计算机组成原理</span>
                             </a>
                         
-                            <a href="/tags/Arduino/">
-                                <span class="chip bg-color">Arduino</span>
+                            <a href="/tags/%E7%A1%AC%E4%BB%B6/">
+                                <span class="chip bg-color">硬件</span>
                             </a>
                         
                     </div>
@@ -440,8 +440,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
-                                工具
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" class="post-category">
+                                计算机组成原理
                             </a>
                         
                     </div>
@@ -453,7 +453,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-15
+                    2020-03-06
                 </div>
                 
 
@@ -462,14 +462,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    1.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    6 分
                 </div>
                 
 				
@@ -485,47 +485,347 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  对于编写<code>Arduino</code>程序的小伙伴，<code>Arduino IDE</code>虽然简单易上手，但当代码量提高或者想查看源码定义时就显得力不从心，因此找到一款能够代替<code>Arduino ID</code>E的编辑器就很有必要。能够支持<code>Arduino</code>的编辑器有很多，像之前的<code>Visual Studio</code>，<code>GitHub</code>的<code>Atom</code>以及微软的<code>VScode</code>等。这里我们选择<code>VScode</code>，它轻量且很多插件，比较为大家所熟知。<br>  <code>VScode</code>编辑<code>Arduino</code>程序支持<strong>代码高亮，代码补全，转到定义，文件跳转</strong>等，对于提高敲代码速度以及查看源码或者库文件实乃必备工具。而且<code>VScode</code>可以跨平台使用，<code>Windows</code>，<code>MAC</code>，<code>Linux</code>都支持。</p>
-<p>话不多说，先看效果：<br><img src="https://img-blog.csdnimg.cn/202002151243131.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt="VScode中的界面"></p>
-<p><img src="https://img-blog.csdnimg.cn/20200215124535290.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt="Arduino中的界面"></p>
-<h2 id="1-Arduino-IDE的安装与使用"><a href="#1-Arduino-IDE的安装与使用" class="headerlink" title="1.Arduino IDE的安装与使用"></a>1.Arduino IDE的安装与使用</h2><p>  由于这些编辑器还是要依赖<code>Arduino IDE</code>，首先安装<code>Arduino IDE</code>和<code>VScode</code>。先进入<code>Arduino</code>的<a href="https://www.arduino.cc/en/Main/Software" target="_blank" rel="noopener">官网</a>，下载<code>Windows Installer</code>安装版本,然后默认安装就行，有问题可以参考其他的安装教程。安装完成后将<code>Arduino IDE</code>加入到环境变量（这一步可以先跳过，到后面有问题再来配置也不迟），<code>我的电脑</code>右键-&gt;<code>属性</code>-&gt;<code>高级系统设置</code>-&gt;<code>环境变量</code>-&gt;新建一个叫<code>ARDUINO</code>的系统变量-&gt;值改成你的安装路径:<br><img src="https://img-blog.csdnimg.cn/20200215130034691.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>添加第三方开发板，<code>文件</code>-&gt;<code>首选项</code>-&gt;<code>附加开发板</code>：<br><img src="https://img-blog.csdnimg.cn/20200215130438601.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>  点击图中<a href="https://github.com/arduino/Arduino/wiki/Unofficial-list-of-3rd-party-boards-support-urls" target="_blank" rel="noopener">红圈链接</a>进入开发板链接网站，然后把相应的链接粘贴到Arduino IDE的白框，每行一个：<br><img src="https://img-blog.csdnimg.cn/20200215130941622.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>然后在<code>Arduino IDE里工具</code>-&gt;<code>开发板</code>-&gt;<code>开发板管理</code>：<br><img src="https://img-blog.csdnimg.cn/20200215131152301.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>  搜索<code>esp8266</code>即可，如果下面进度条迟迟加载不出来（原因你懂的），可以换下网络多试几遍（可能需要任务管理器结束任务），也可以挂代理，会比较快。<br><img src="https://img-blog.csdnimg.cn/2020021513131419.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""></p>
-<h2 id="2-VScode的安装与使用"><a href="#2-VScode的安装与使用" class="headerlink" title="2.VScode的安装与使用"></a>2.VScode的安装与使用</h2><p>  进入<a href="https://code.visualstudio.com/download" target="_blank" rel="noopener">官网</a>下载相应的安装版本,默认安装就行，别忘<strong>勾选添加路径</strong>。然后进入<code>VScode</code>添加一些插件，需要什么插件搜索就行，可以参考下我的：<br><img src="https://img-blog.csdnimg.cn/2020021513215291.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>  然后做一些设置，主界面-&gt;<code>文件</code>-&gt;<code>首选项</code>-&gt;<code>设置</code>，点击右上角按钮进入<code>settings.json</code>:<br><img src="https://img-blog.csdnimg.cn/20200215132538855.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>做如下设置：</p>
-<pre class="line-numbers language-json"><code class="language-json">    <span class="token property">"arduino.path"</span><span class="token operator">:</span> <span class="token string">"C:\\Program Files (x86)\\Arduino"</span><span class="token punctuation">,</span>
-    <span class="token property">"C_Cpp.intelliSenseEngine"</span><span class="token operator">:</span> <span class="token string">"Tag Parser"</span><span class="token punctuation">,</span>
-    <span class="token property">"editor.insertSpaces"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-    <span class="token property">"files.autoGuessEncoding"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-    <span class="token property">"arduino.logLevel"</span><span class="token operator">:</span> <span class="token string">"info"</span><span class="token punctuation">,</span>
-    <span class="token property">"explorer.confirmDelete"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
-    <span class="token property">"editor.detectIndentation"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20200215132839797.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>  其中<code>Arduino IDE</code>的安装位置根据实际情况改动，<kbd>ctrl</kbd>+<kbd>s</kbd>保存即可。然后文件-&gt;打开文件夹，选中你存放Arduino程序的<strong>文件夹</strong>，注意是文件夹，不是里面的<code>.ino</code>文件。然后点击页面底部相应按钮选择开发板，编译，上传（右上角）即可：<br><img src="https://img-blog.csdnimg.cn/20200215133613970.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""></p>
-<h2 id="3-解决VScode编译Arduino程序速度慢的问题"><a href="#3-解决VScode编译Arduino程序速度慢的问题" class="headerlink" title="3.解决VScode编译Arduino程序速度慢的问题"></a>3.解决VScode编译Arduino程序速度慢的问题</h2><p><img src="https://img-blog.csdnimg.cn/20200215134740202.png" alt=""><br>  编译时可以看到<code>VScode</code>有<code>Warning</code>警告，此时我们只需在当前项目的<code>.vscode</code> -&gt; <code>arduino.json</code>文件中将输出目录 <code>output</code> 配置一下就可以大大提高二次下载的编译速度，<strong>注意json的格式</strong>，什么时候末尾该有逗号。</p>
-<pre class="line-numbers language-json"><code class="language-json"><span class="token punctuation">{</span>
-    <span class="token property">"board"</span><span class="token operator">:</span> <span class="token string">"esp8266:esp8266:generic"</span><span class="token punctuation">,</span>
-    <span class="token property">"configuration"</span><span class="token operator">:</span> <span class="token string">"xtal=80,vt=flash,......省略一些"</span><span class="token punctuation">,</span>
-    <span class="token property">"programmer"</span><span class="token operator">:</span> <span class="token string">"AVR ISP"</span><span class="token punctuation">,</span>
-    <span class="token property">"output"</span><span class="token operator">:</span> <span class="token string">"./build"</span><span class="token punctuation">,</span>
-    <span class="token property">"sketch"</span><span class="token operator">:</span> <span class="token string">"Wifi_Scan.ino"</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="4-VScode中的Git使用"><a href="#4-VScode中的Git使用" class="headerlink" title="4.VScode中的Git使用"></a>4.VScode中的Git使用</h2><p>  关于<code>Git</code>的使用和总结可以参考我的<a href="https://sunmengxin.cn/Git-tutorial/">Git教程学习笔记及VScode中Git使用</a>。打开<code>VScode</code>：<code>文件-&gt;首选项-&gt;设置</code>，然后点击图中<code>红圈</code>里的按钮：<br><img src="https://img-blog.csdnimg.cn/20200214213620479.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>  在设置里添加以下两句，其中第一句添加git安装位置（确保安装git时勾选添加到系统变量），第二局将<code>VScode</code>中的终端换成默认<code>Git Bash</code>。</p>
-<pre class="line-numbers language-json"><code class="language-json"><span class="token property">"git.path"</span><span class="token operator">:</span> <span class="token string">"C:\\Program Files\\Git\\cmd\\git.exe"</span><span class="token punctuation">,</span>
-<span class="token property">"terminal.integrated.shell.windows"</span><span class="token operator">:</span> <span class="token string">"C:\\Program Files\\Git\\bin\\bash.exe"</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>然后用快捷键<kbd>Ctrl</kbd>+<kbd>~</kbd>打开终端输入<code>git init</code>：</p>
-<pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">git</span> init
-Initialized empty Git repository <span class="token keyword">in</span> C:/Users/MengXin/Desktop/ESP/ESP8266/code/test_hardwarw/.git/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>  然后点击<code>新建文件</code>，输入文件名<code>.gitignore</code>，确定让Git跟踪哪些文件，忽略哪些文件，有关详细用法可参考<a href="https://git-scm.com/book/zh/v2" target="_blank" rel="noopener">Git官方中文教程</a>。</p>
-<pre><code>    build/
-    .vscode/*
-    !.vscode/arduino.json</code></pre><p><img src="https://img-blog.csdnimg.cn/20200215142835115.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br>  输入后<code>ctrl</code>+<code>s</code>保存，然后左侧<code>源代码管理</code>-&gt;右上角三个点<code>更多操作</code>-&gt;<code>暂存所有更改</code>-&gt;<code>全部提交</code>-&gt;<code>输入提交信息</code>，例如我的信息<code>第一次提交代码</code>，然后在终端输入<code>git log</code>即可查看信息；这几步相当于Git命令中的：</p>
-<pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">git</span> add <span class="token keyword">.</span>
-$ <span class="token function">git</span> commit -m <span class="token string">"第一次提交代码"</span>
-$ <span class="token function">git</span> log
-  commit 8a636c62040cdc7897f90766636943c6ddc8af19 <span class="token punctuation">(</span>HEAD -<span class="token operator">></span> master<span class="token punctuation">)</span>
-  Author: MM-X <span class="token operator">&lt;</span>smx******@gmail.com<span class="token operator">></span>
-  Date:   Sat Feb 15 14:37:58 2020 +0800
+                <h2 id="思维导图："><a href="#思维导图：" class="headerlink" title="思维导图："></a>思维导图：</h2><img width="650" src="https://i.loli.net/2020/03/03/Zvhezdtl6R8ETsD.png">
 
-    第一次提交代码<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20200215143104710.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br><img src="https://img-blog.csdnimg.cn/20200215143319154.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""></p>
-<h2 id="5-Git中文显示乱码问题"><a href="#5-Git中文显示乱码问题" class="headerlink" title="5.Git中文显示乱码问题"></a>5.Git中文显示乱码问题</h2><p>  在桌面空白<code>右击</code>-&gt;<code>Git Bash Here</code>-&gt;<code>在弹出框右击</code>-&gt;<code>Options</code>-&gt;<code>Text</code>，做如下设置即可。<br><img src="https://img-blog.csdnimg.cn/20200215144319996.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxX181OTA5ODA=,size_16,color_FFFFFF,t_70" alt=""><br><br><br><br><br><strong>参考：</strong><br>  <a href="https://www.arduino.cn/thread-81253-1-1.html" target="_blank" rel="noopener"> ESP32使用blinker库的arduino IDE上手教程,升级vscode教程,git教程</a><br>  <a href="https://sunmengxin.cn/Git-tutorial/">Git教程学习笔记及VScode中Git使用</a><br>  <a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">廖雪峰的Git教程</a></p>
+<h2 id="一、存储器概述"><a href="#一、存储器概述" class="headerlink" title="一、存储器概述"></a>一、存储器概述</h2><h3 id="1-存储器的分类"><a href="#1-存储器的分类" class="headerlink" title="1.存储器的分类"></a>1.存储器的分类</h3><p><strong>按存储介质：</strong></p>
+<blockquote>
+<ul>
+<li>半导体存储器</li>
+<li>磁表面/磁芯存储器</li>
+<li>光盘存储器</li>
+</ul>
+</blockquote>
+<p><strong>按存取方式：</strong></p>
+<blockquote>
+<ul>
+<li>存取时间与物理地址无关/随机访问<ul>
+<li>随机存储器</li>
+<li>只读存储器</li>
+</ul>
+</li>
+<li>存取时间与物理地址有关/串行访问</li>
+</ul>
+</blockquote>
+<p><strong>按在计算机中的作用分类：</strong></p>
+<img width="400" src="https://i.loli.net/2020/03/03/FRgI1oeEZxM6Xld.png">
+
+<h3 id="2-存储器的层次结构"><a href="#2-存储器的层次结构" class="headerlink" title="2.存储器的层次结构"></a>2.存储器的层次结构</h3><p><strong>三个主要特征：</strong></p>
+<img width="500" src="https://i.loli.net/2020/03/03/eD8Xn7qyNRE4YPL.png">
+
+<p><strong>到CPU的“距离”：</strong></p>
+<img width="400" src="https://i.loli.net/2020/03/03/Q8thpYwVDWMEbKH.png">
+
+<h2 id="二、主存储器"><a href="#二、主存储器" class="headerlink" title="二、主存储器"></a>二、主存储器</h2><h3 id="1-概述"><a href="#1-概述" class="headerlink" title="1.概述"></a>1.概述</h3><p><strong>主存储器的基本组成：</strong></p>
+<img width="400" src="https://i.loli.net/2020/03/03/FzylJZcGu4HXpP6.png">
+
+<p><strong>主存和CPU关系：</strong></p>
+<img width="400" src="https://i.loli.net/2020/03/03/IG1lBnF5fUODVMx.png">
+
+<p><strong>主存中地址分配：</strong></p>
+<blockquote>
+<p><strong>大端模式</strong>和<strong>小端模式</strong></p>
+</blockquote>
+<img width="500" src="https://i.loli.net/2020/03/03/CZ7deJm3GpNxQyE.png">
+
+<p><strong>主存技术指标：</strong></p>
+<blockquote>
+<ul>
+<li><strong>存储容量：</strong>存放二进制代码的总位数  </li>
+<li><strong>存储速度：</strong>存取时间和存取周期</li>
+<li><strong>存储带宽：</strong><code>bit/s</code></li>
+</ul>
+</blockquote>
+<h3 id="2-半导体存储芯片"><a href="#2-半导体存储芯片" class="headerlink" title="2.半导体存储芯片"></a>2.半导体存储芯片</h3><h4 id="（1）半导体存储芯片的基本结构"><a href="#（1）半导体存储芯片的基本结构" class="headerlink" title="（1）半导体存储芯片的基本结构:"></a>（1）半导体存储芯片的基本结构:</h4><blockquote>
+<p><strong>片选线：</strong> $\overline{CS}$   $\overline{CE}$   <em>可以通过片选线组成存储阵列</em></p>
+<p><strong>读/写控制线：</strong>  $\overline{WE}$（低电平写，高电平读）  $\overline{OE}$（允许读）  $\overline{WE}$（允许写）</p>
+</blockquote>
+<img width="500" src="https://i.loli.net/2020/03/03/mvDanqWZoMCg3IB.png">
+
+<table>
+<thead>
+<tr>
+<th align="center">地址线（单向）</th>
+<th align="center">数据线（双向）</th>
+<th align="center">芯片容量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">10</td>
+<td align="center">4</td>
+<td align="center">1K X 4 位</td>
+</tr>
+<tr>
+<td align="center">14</td>
+<td align="center">1</td>
+<td align="center">16K X 1 位</td>
+</tr>
+<tr>
+<td align="center">13</td>
+<td align="center">8</td>
+<td align="center">8K X 8 位</td>
+</tr>
+</tbody></table>
+<h4 id="（2）半导体存储芯片的译码驱动方式："><a href="#（2）半导体存储芯片的译码驱动方式：" class="headerlink" title="（2）半导体存储芯片的译码驱动方式："></a>（2）半导体存储芯片的译码驱动方式：</h4><p><strong>线选法：</strong></p>
+<img width="450" src="https://i.loli.net/2020/03/03/96lGcjHL7CwZU1x.png">
+
+<p><strong>重合法：</strong></p>
+<img width="500" src="https://i.loli.net/2020/03/03/b1897IcDEVtkpuU.png">
+
+<h3 id="3-随机存取存储器-RAM"><a href="#3-随机存取存储器-RAM" class="headerlink" title="3.随机存取存储器(RAM)"></a>3.随机存取存储器(RAM)</h3><h4 id="（1）静态-RAM-SRAM-："><a href="#（1）静态-RAM-SRAM-：" class="headerlink" title="（1）静态 RAM (SRAM)："></a>（1）静态 RAM (SRAM)：</h4><img width="500" src="https://i.loli.net/2020/03/03/RxW1rAQnHywiaum.png">
+
+<h4 id="（2）动态-RAM-DRAM-："><a href="#（2）动态-RAM-DRAM-：" class="headerlink" title="（2）动态 RAM ( DRAM )："></a>（2）动态 RAM ( DRAM )：</h4><h5 id="基本电路："><a href="#基本电路：" class="headerlink" title="基本电路："></a><strong>基本电路：</strong></h5><img width="500" src="https://i.loli.net/2020/03/03/GbImo8VBgTERK3Y.png">
+
+<h5 id="动态RAM刷新："><a href="#动态RAM刷新：" class="headerlink" title="动态RAM刷新："></a>动态<code>RAM</code>刷新：</h5><blockquote>
+<p><strong>刷新与行地址有关</strong>  </p>
+</blockquote>
+<ul>
+<li><strong>集中刷新：</strong></li>
+</ul>
+<img width="500" src="https://i.loli.net/2020/03/03/XmRzfD8SYCrQZbI.png">
+
+<ul>
+<li><strong>分散刷新：</strong></li>
+</ul>
+<img width="500" src="https://i.loli.net/2020/03/03/lSo6p9v4HQcn5Gi.png">
+
+<ul>
+<li><strong>分散刷新与集中刷新相结合（异步刷新）：</strong></li>
+</ul>
+<img width="500" src="https://i.loli.net/2020/03/03/DeIPSQZhNfLowgz.png">
+
+<h4 id="（3）动态-RAM-和静态-RAM-的比较"><a href="#（3）动态-RAM-和静态-RAM-的比较" class="headerlink" title="（3）动态 RAM 和静态 RAM 的比较"></a>（3）动态 RAM 和静态 RAM 的比较</h4><img width="500" src="https://i.loli.net/2020/03/03/eqw7uOAil15raPt.png">
+
+<h3 id="4-只读存储器-ROM"><a href="#4-只读存储器-ROM" class="headerlink" title="4.只读存储器(ROM)"></a>4.只读存储器(ROM)</h3><blockquote>
+<p>1.掩模 <strong>ROM</strong> ( MROM )：<code>Read only memory</code></p>
+<p>2.<strong>PROM</strong> (一次性编程):</p>
+<p>3.<strong>EPROM</strong> (多次性编程 ):</p>
+<p>4.<strong>EEPROM</strong> (多次性编程 ):</p>
+<ul>
+<li><p>电可擦写</p>
+</li>
+<li><p>局部擦写</p>
+</li>
+<li><p>全部擦写</p>
+</li>
+</ul>
+<p>5.<strong>Flash Memory</strong> (闪速型存储器):</p>
+<ul>
+<li>比EEPROM快</li>
+<li>介于EEPROM和RAM之间</li>
+</ul>
+</blockquote>
+<h3 id="5-存储器与CPU的连接"><a href="#5-存储器与CPU的连接" class="headerlink" title="5.存储器与CPU的连接"></a>5.存储器与CPU的连接</h3><p><strong>存储器容量的扩展：</strong></p>
+<blockquote>
+<ol>
+<li><strong>位扩展</strong>（增加存储字长）:用<code>2</code>片<code>1K × 4</code>位存储芯片组成<code>1K × 8</code>位的存储器(<code>10</code>根地址线，<code>8</code>根数据线)</li>
+</ol>
+</blockquote>
+<img width="500" src="https://i.loli.net/2020/03/03/m8ceTQY3E9XwP6C.png">
+
+<blockquote>
+<ol start="2">
+<li>字扩展**（增加存储字的数量）:用<code>2</code>片<code>1K × 8</code>位 存储芯片组成<code>2K × 8</code>位的存储器(<code>11</code>根地址线，<code>8</code>根数据线)</li>
+</ol>
+</blockquote>
+<img width="500" src="https://i.loli.net/2020/03/03/t2MVAEvzYGn4FOJ.png">
+
+<blockquote>
+<ol start="3">
+<li>字、位扩展**:用<code>8</code>片<code>1K × 4</code>位 存储芯片组成<code>4K × 8</code>位的存储器  (<code>12</code>根地址线，<code>8</code>根数据线)</li>
+</ol>
+</blockquote>
+<img width="500" src="https://i.loli.net/2020/03/03/7cJadu2ZqUXBYRj.png">
+
+<p><strong>存储器与 CPU 的连接：</strong></p>
+<blockquote>
+<ul>
+<li>地址线的连接</li>
+<li>数据线的连接</li>
+<li>读/写命令线的连接</li>
+<li>片选线的连接</li>
+<li>合理选择存储芯片</li>
+<li>其他时序、负载</li>
+</ul>
+</blockquote>
+<img width="450" src="https://i.loli.net/2020/03/03/e2WN1tZimzkPGKf.png">
+
+<h3 id="6-存储器的校验"><a href="#6-存储器的校验" class="headerlink" title="6.存储器的校验"></a>6.存储器的校验</h3><p><strong>编码的最小距离:</strong></p>
+<blockquote>
+<p>任意两组合法代码之间<strong>二进制位数</strong>的<strong>最少差异</strong></p>
+<p><strong>编码</strong>的<strong>纠错</strong> 、<strong>检错能力</strong>与编码的<strong>最小距离</strong>有关</p>
+</blockquote>
+<p><strong>汉明码的组成:</strong></p>
+<img width="500" src="https://i.loli.net/2020/03/03/ZahfkuqzV1lFX2J.png">
+
+<h3 id="7-提高访存速度"><a href="#7-提高访存速度" class="headerlink" title="7.提高访存速度"></a>7.提高访存速度</h3><blockquote>
+<ul>
+<li>采用高速器件</li>
+<li>调整主存结构</li>
+<li>采用层次结构:<code>Cache</code> – <code>主存</code></li>
+</ul>
+</blockquote>
+<p><strong>单体多字系统：</strong></p>
+<p><strong>多体并行系统：</strong></p>
+<blockquote>
+<ul>
+<li>高位交叉</li>
+<li>低位交叉：在不改变存取周期的前提下，增加存储器的带宽  </li>
+</ul>
+</blockquote>
+<p><strong>高性能存储芯片：</strong></p>
+<blockquote>
+<ul>
+<li><strong>SDRAM(同步DRAM)：</strong>在系统时钟的控制下进行读出和写入,<code>CPU</code>无须等待 </li>
+<li><strong>RDRAM：</strong>解决存储器带宽问题</li>
+<li><strong>带Cache的DRAM:</strong>在<code>DRAM</code>的芯片内集成了一个由<code>SRAM</code>组成的<code>Cache</code>有利于<strong>猝发式读取</strong>  </li>
+</ul>
+</blockquote>
+<h2 id="三、高速缓冲存储器-Cache"><a href="#三、高速缓冲存储器-Cache" class="headerlink" title="三、高速缓冲存储器(Cache)"></a>三、高速缓冲存储器(Cache)</h2><h3 id="1-概述-1"><a href="#1-概述-1" class="headerlink" title="1.概述"></a>1.概述</h3><p><strong>问题的提出：</strong></p>
+<blockquote>
+<p>避免<code>CPU</code>“<strong>空等</strong>”现象<br><code>CPU</code>和主存(<code>DRAM</code>)的<strong>速度差异</strong></p>
+</blockquote>
+<img width="400" src="https://i.loli.net/2020/03/03/wF92QaTgckb3pR6.png">
+
+<p><strong>Cache工作原理：</strong></p>
+<blockquote>
+<ol>
+<li>主存和缓存的编址  :主存和缓存按块存储，块的大小相同</li>
+<li>命中与未命中  </li>
+<li><code>Cache</code>的命中率  </li>
+<li><code>Cache</code> –<code>主存</code>系统的效率  </li>
+</ol>
+</blockquote>
+<p><strong>Cache 的基本结构 :</strong></p>
+<img width="500" src="https://i.loli.net/2020/03/03/36aXFgOYReNLVyi.png">
+
+<p><strong>Cache 的读写操作:</strong>  </p>
+<blockquote>
+<ul>
+<li>写直达法(Write through)：写操作时数据既写入<code>Cache</code>又写入主存，写操作s时间就是访问主存的时间，<code>Cache</code>块退出时，不需要对主存执行写操作，更新策略比较容易实 </li>
+<li>写回法(Write back)： 写操作时只把数据写入<code>Cache</code>而不写入主存, 写操作时间就是访问Cache的时间，<code>Cache</code>块退出时，被替换的块需写回主存，增加了<code>Cache</code>的复杂性  </li>
+</ul>
+</blockquote>
+<p><strong>Cache 的改进  :</strong></p>
+<blockquote>
+<ul>
+<li>增加<code>Cache</code>的级数  </li>
+<li>统一缓存和分立缓存  </li>
+</ul>
+</blockquote>
+<h3 id="2-Cache-主存的地址映射"><a href="#2-Cache-主存的地址映射" class="headerlink" title="2.Cache-主存的地址映射"></a>2.Cache-主存的地址映射</h3><p><strong>直接映射:</strong></p>
+<blockquote>
+<p>某一主存块只能固定映射到某一缓存块</p>
+</blockquote>
+<img width="500" src="https://i.loli.net/2020/03/03/YlpFcS8ALQTEGzK.png">
+
+<p><strong>全相联映射：</strong></p>
+<blockquote>
+<p>某一主存块能映射到任一缓存块</p>
+</blockquote>
+<img width="500" src="https://i.loli.net/2020/03/03/O1ylfkgENXdpDa4.png">
+
+<p><strong>组相联映射</strong>：</p>
+<blockquote>
+<p>某一主存块只能映射到某一缓存组中的任一块</p>
+</blockquote>
+<img width="500" src="https://i.loli.net/2020/03/03/PmiEdVw9HjXF8k4.png">
+
+<h3 id="3-替换算法"><a href="#3-替换算法" class="headerlink" title="3.替换算法"></a>3.替换算法</h3><blockquote>
+<ul>
+<li>先进先出 （ FIFO ） 算法</li>
+<li>近期最少使用（ LRU） 算法</li>
+</ul>
+</blockquote>
+<h2 id="四、辅助存储器"><a href="#四、辅助存储器" class="headerlink" title="四、辅助存储器"></a>四、辅助存储器</h2><h3 id="1-概述-2"><a href="#1-概述-2" class="headerlink" title="1.概述"></a>1.概述</h3><p><strong>特点：</strong></p>
+<blockquote>
+<p>不直接与 CPU 交换信息</p>
+</blockquote>
+<p><strong>磁表面存储器的技术指标:</strong></p>
+<blockquote>
+<ol>
+<li>记录密度</li>
+<li>存储容量</li>
+<li>平均寻址时间</li>
+<li>数据传输率</li>
+<li>误码率</li>
+</ol>
+</blockquote>
+<h3 id="2-磁记录"><a href="#2-磁记录" class="headerlink" title="2.磁记录"></a>2.磁记录</h3><blockquote>
+<p>电生磁，磁生电</p>
+</blockquote>
+<h3 id="3-硬磁盘"><a href="#3-硬磁盘" class="headerlink" title="3.硬磁盘"></a>3.硬磁盘</h3><p><strong>硬磁盘存储器的类型：</strong></p>
+<blockquote>
+<ul>
+<li>固定磁头和移动磁头</li>
+<li>可换盘和固定盘</li>
+</ul>
+</blockquote>
+<p><strong>硬磁盘存储器结构:</strong></p>
+<blockquote>
+<ul>
+<li>磁盘驱动器</li>
+<li>磁盘控制器</li>
+<li>盘片</li>
+</ul>
+</blockquote>
+<h3 id="4-软磁盘"><a href="#4-软磁盘" class="headerlink" title="4.软磁盘"></a>4.软磁盘</h3><table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">硬盘</th>
+<th align="center">软盘</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>速度</strong></td>
+<td align="center">高</td>
+<td align="center">低</td>
+</tr>
+<tr>
+<td align="center"><strong>磁头</strong></td>
+<td align="center">固定、活动、浮动</td>
+<td align="center">活动</td>
+</tr>
+<tr>
+<td align="center"><strong>盘片</strong></td>
+<td align="center">固定盘、盘组大部分不可换</td>
+<td align="center">接触盘片</td>
+</tr>
+<tr>
+<td align="center"><strong>价格</strong></td>
+<td align="center">高</td>
+<td align="center">可换盘片</td>
+</tr>
+<tr>
+<td align="center"><strong>环境</strong></td>
+<td align="center">苛刻</td>
+<td align="center">低</td>
+</tr>
+</tbody></table>
+<h3 id="5-磁带"><a href="#5-磁带" class="headerlink" title="5.磁带"></a>5.磁带</h3><h3 id="6-光盘"><a href="#6-光盘" class="headerlink" title="6.光盘"></a>6.光盘</h3><blockquote>
+<p>采用光存储技术,利用激光写入和读出:</p>
+<ul>
+<li><strong>第一代光存储技术</strong>：采用非磁性介质；不可擦写</li>
+<li><strong>第二代光存储技术</strong>：采用磁性介质；可擦写</li>
+</ul>
+</blockquote>
+<h2 id="五、附加总结"><a href="#五、附加总结" class="headerlink" title="五、附加总结"></a>五、附加总结</h2><blockquote>
+<ol>
+<li><code>ROM</code>在系统<strong>停止供电</strong>的时候仍然可以<strong>保持数据</strong>，而<code>RAM</code>通常都是在<strong>掉电</strong>之后就<strong>丢失数据</strong>。</li>
+<li><code>EEPROM</code>(电子可擦除可编程ROM)，<code>ROM</code>的一种改进，可擦除重复使用，掉电数据不丢失</li>
+<li><code>FLASH</code>存储器又称闪存,它结合了<code>ROM</code>和<code>RA</code>M的长处,具有<code>EEPROM</code>(电子可擦除可编程)特点，掉电不丢失，可以快速读取数据,用于嵌入式系统存储程序，有些用<code>FLASH</code>部分扇区充当<code>EEPROM</code>(ESP8266)</li>
+<li><code>SRAM</code>(静态RAM,Static RAM)，速度非常快，是目前读写最快的存储设备了，而且不需要刷新，但是它也非常昂贵，用作一级缓冲，二级缓冲</li>
+<li><code>DRA</code>M(动态RAM,Dynamic RAM),<code>DRAM</code>保留数据的时间很短(电容存储，需要不断充电刷新)，速度也比<code>SRAM</code>慢，比任何的<code>ROM</code>都要快，价格上来说<code>DRAM</code>相比<code>SRAM</code>要便宜很多</li>
+<li><code>SDRAM</code>(同步动态随机存取存储器,Synchronous Dynamic RAM)，应用于代码大，算法复杂，带操作系统的应用，<code>SDRAM</code>独立于<code>MPU</code>，可以根据应用的情况选择<code>RAM</code>的大小，一般外接用<code>SDRAM</code>，容量比较大，一般<code>MB~GB</code>，<code>DDR</code>是<code>SDRAM</code>的一种</li>
+<li><code>PSRAM</code>(伪静态随机存储器,Pseudo static random access memory),内部的内存颗粒跟<code>DRAM</code>的颗粒相似，但外部的接口跟<code>SRAM</code>相似，不需要<code>DRAM</code>那样复杂的控制器和刷新机制,内部自带刷新机制。</li>
+</ol>
+</blockquote>
+<p>注：本篇除思维导图，其它图片均来自PPT课件</p>
+<br>
+
+<blockquote>
+<p><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f447.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f447.png?v8">👇</span>欢迎评论转发٩(๑•̀ω•́๑)۶<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f61c.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f61c.png?v8">😜</span></p>
+</blockquote>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -569,7 +869,7 @@ $ <span class="token function">git</span> log
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://sunmengxin.cn/vscode-replace-arduino/">https://sunmengxin.cn/vscode-replace-arduino/</a>
+                    <a href="https://sunmengxin.cn/CSCC/04-storage/">https://sunmengxin.cn/CSCC/04-storage/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -611,12 +911,12 @@ $ <span class="token function">git</span> log
                                     <span class="chip bg-color">原创</span>
                                 </a>
                             
-                                <a href="/tags/VScode/">
-                                    <span class="chip bg-color">VScode</span>
+                                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">
+                                    <span class="chip bg-color">计算机组成原理</span>
                                 </a>
                             
-                                <a href="/tags/Arduino/">
-                                    <span class="chip bg-color">Arduino</span>
+                                <a href="/tags/%E7%A1%AC%E4%BB%B6/">
+                                    <span class="chip bg-color">硬件</span>
                                 </a>
                             
                         </div>
@@ -787,7 +1087,7 @@ $ <span class="token function">git</span> log
         repo: 'MM-X.github.io',
         owner: 'MM-X',
         admin: "MM-X",
-        id: '2020-02-15T15-16-09',
+        id: '2020-03-06T21-08-09',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1075,31 +1375,31 @@ $ <span class="token function">git</span> log
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/vmware15-install-macos/">
+                <a href="/storage-difference/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="VMware15安装MAC OS10.14（新版详细）">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="RAM、ROM、FLASH、EEPORM、PSRAM各是什么及其区别">
                         
-                        <span class="card-title">VMware15安装MAC OS10.14（新版详细）</span>
+                        <span class="card-title">RAM、ROM、FLASH、EEPORM、PSRAM各是什么及其区别</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            VMware15安装MAC OS10.14
+                            RAM、ROM、FLASH、EEPORM、PSRAM对比
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-20
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-06
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
-                                    教程
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    笔记
                                 </a>
                             
                             
@@ -1113,12 +1413,12 @@ $ <span class="token function">git</span> log
                         <span class="chip bg-color">原创</span>
                     </a>
                     
-                    <a href="/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/">
-                        <span class="chip bg-color">虚拟机</span>
+                    <a href="/tags/%E7%A1%AC%E4%BB%B6/">
+                        <span class="chip bg-color">硬件</span>
                     </a>
                     
-                    <a href="/tags/MAC-OS/">
-                        <span class="chip bg-color">MAC OS</span>
+                    <a href="/tags/%E5%AD%98%E5%82%A8%E5%99%A8/">
+                        <span class="chip bg-color">存储器</span>
                     </a>
                     
                 </div>
@@ -1132,30 +1432,31 @@ $ <span class="token function">git</span> log
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/Git-tutorial/">
+                <a href="/CSCC/03-system-bus/">
                     <div class="card-image">
                         
-                        <img src="https://s2.ax1x.com/2020/02/14/1vicIP.png" class="responsive-img" alt="Git教程学习笔记及VScode中Git使用">
                         
-                        <span class="card-title">Git教程学习笔记及VScode中Git使用</span>
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="计算机组成原理 - 3.数据总线">
+                        
+                        <span class="card-title">计算机组成原理 - 3.数据总线</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Git教程学习笔记
+                            《计算机组成原理》总结第三章
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-14
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-04
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
-                                    工具
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" class="post-category">
+                                    计算机组成原理
                                 </a>
                             
                             
@@ -1169,12 +1470,12 @@ $ <span class="token function">git</span> log
                         <span class="chip bg-color">原创</span>
                     </a>
                     
-                    <a href="/tags/Git/">
-                        <span class="chip bg-color">Git</span>
+                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">
+                        <span class="chip bg-color">计算机组成原理</span>
                     </a>
                     
-                    <a href="/tags/VSCode/">
-                        <span class="chip bg-color">VSCode</span>
+                    <a href="/tags/%E7%A1%AC%E4%BB%B6/">
+                        <span class="chip bg-color">硬件</span>
                     </a>
                     
                 </div>
@@ -1348,6 +1649,13 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 
 
