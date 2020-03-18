@@ -1,3 +1,6 @@
+https://sunmengxin.cn/CSCC/08-structure-function/
+https://sunmengxin.cn/CSCC/07-instruction-system/
+https://sunmengxin.cn/CSCC/06-operational-method/
 https://sunmengxin.cn/CSCC/05-IO/
 https://sunmengxin.cn/storage-difference/
 https://sunmengxin.cn/CSCC/04-storage/

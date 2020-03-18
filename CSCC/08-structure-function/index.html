@@ -5,11 +5,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="计算机组成原理 - 5.输入输出系统, 孙孟鑫,sunmengxin,mengxin,孟鑫,机电一体化,机器人">
+    <meta name="keywords" content="计算机组成原理 - 8.CPU的结构与功能, 孙孟鑫,sunmengxin,mengxin,孟鑫,机电一体化,机器人">
     <meta name="baidu-site-verification" content="wGFMStAFna" />
     <meta name="google-site-verification" content="aSdRqh383jhnQe6RPmd5mkt5UZMXUC1Z_tNs2cLpsyE" />
     <meta name="360-site-verification" content="" />
-    <meta name="description" content="《计算机组成原理》总结第五章">
+    <meta name="description" content="《计算机组成原理》总结第八章">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>计算机组成原理 - 5.输入输出系统 | MengXin</title>
+    <title>计算机组成原理 - 8.CPU的结构与功能 | MengXin</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -298,12 +298,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">计算机组成原理 - 5.输入输出系统</h1>
+                    <h1 class="description center-align post-title">计算机组成原理 - 8.CPU的结构与功能</h1>
                 </div>
             </div>
         </div>
@@ -453,7 +453,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-07
+                    2020-03-16
                 </div>
                 
 
@@ -462,14 +462,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.8k
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    4 分
                 </div>
                 
 				
@@ -485,339 +485,251 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="思维导图："><a href="#思维导图：" class="headerlink" title="思维导图："></a>思维导图：</h2><img width="650" src="https://i.loli.net/2020/03/07/FqMtxT9irCamL7j.png">
+                <h2 id="思维导图："><a href="#思维导图：" class="headerlink" title="思维导图："></a>思维导图：</h2><img width="650" src="https://i.loli.net/2020/03/17/poirAxNSCqwWzb9.png">
 
-<h2 id="一、输入输出系统概述"><a href="#一、输入输出系统概述" class="headerlink" title="一、输入输出系统概述"></a>一、输入输出系统概述</h2><h3 id="1-输入输出系统发展"><a href="#1-输入输出系统发展" class="headerlink" title="1.输入输出系统发展"></a>1.输入输出系统发展</h3><blockquote>
-<ol>
-<li><p>分散连接，CPU 和 I/O设备串行工作程序查询方式</p>
-</li>
-<li><p>总线连接，CPU 和 I/O设备并行工作，分为<strong>中断方式</strong>和<strong>DMA方式</strong></p>
-</li>
-<li><p>具有通道结构的阶段</p>
-</li>
-<li><p>具有 I/O 处理机的阶段</p>
-</li>
-</ol>
-</blockquote>
-<h3 id="2-输入输出系统组成"><a href="#2-输入输出系统组成" class="headerlink" title="2.输入输出系统组成"></a>2.输入输出系统组成</h3><ul>
-<li><p><strong>I/O 软件</strong></p>
-<blockquote>
-<ol>
-<li>I/O 指令：CPU 指令的一部分，分为 |操作码|命令码|设备码|</li>
-<li>通道指令：通道自身的指令，指出数组的首地址、传送字数、操作命令</li>
-</ol>
-</blockquote>
-</li>
-<li><p><strong>I/O 硬件</strong></p>
-<blockquote>
-<p> I/O 接口；设备控制器</p>
-</blockquote>
-</li>
-</ul>
-<h3 id="3-I-O设备与主机联系"><a href="#3-I-O设备与主机联系" class="headerlink" title="3.I/O设备与主机联系"></a>3.I/O设备与主机联系</h3><p><strong>I/O 设备编址方式</strong>：</p>
+<h2 id="一、CPU的结构"><a href="#一、CPU的结构" class="headerlink" title="一、CPU的结构"></a>一、CPU的结构</h2><h3 id="1-CPU的功能"><a href="#1-CPU的功能" class="headerlink" title="1.CPU的功能"></a>1.CPU的功能</h3><p><strong>控制器的功能</strong></p>
 <blockquote>
 <ul>
-<li>统一编址：用取数、存数指令</li>
-<li>不统一编址：有专门的 I/O 指令</li>
+<li>取指令：指令控制</li>
+<li>分析指令：操作控制</li>
+<li>执行指令，发出各种操作命令控制程序输入及结果的输出：时间控制</li>
+<li>总线管理：处理中断</li>
+<li>处理异常情况和特殊请求：数据加工</li>
 </ul>
 </blockquote>
-<p><strong>设备选址</strong>：</p>
+<p>运算器的功能</p>
 <blockquote>
-<p>用设备选择电路识别是否被选中</p>
+<p>实现算术运算和逻辑运算</p>
 </blockquote>
-<p><strong>传送方式</strong>：</p>
-<blockquote>
-<p>分为串行和并行</p>
-</blockquote>
-<p><strong>联络方式</strong>：</p>
+<h3 id="2-CPU的结构框图"><a href="#2-CPU的结构框图" class="headerlink" title="2.CPU的结构框图"></a>2.CPU的结构框图</h3><img width="300" src="https://i.loli.net/2020/03/17/JNbBoWmZifDGP74.png">
+
+<h3 id="3-CPU的寄存器"><a href="#3-CPU的寄存器" class="headerlink" title="3.CPU的寄存器"></a>3.CPU的寄存器</h3><p><strong>用户可见寄存器</strong></p>
 <blockquote>
 <ol>
-<li>立即响应</li>
-<li>异步工作采用应答信号</li>
-<li>同步工作采用同步时标</li>
-</ol>
-</blockquote>
-<p><strong>I/O 设备与主机的连接方式</strong>：</p>
-<blockquote>
-<ul>
-<li>辐射式连接：每台设备都配有一套控制线路和一组信号线，不便于增删设备</li>
-<li>总线连接：便于增删设备</li>
-</ul>
-</blockquote>
-<h3 id="4-I-O设备与主机信息传送"><a href="#4-I-O设备与主机信息传送" class="headerlink" title="4.I/O设备与主机信息传送"></a>4.I/O设备与主机信息传送</h3><p><strong>I/O系统的自治能力与来越强</strong></p>
-<blockquote>
-<ul>
-<li>程序查询方式</li>
-<li>程序中断方式</li>
-<li>DMA方式</li>
-</ul>
-</blockquote>
-<img width="500" src="https://i.loli.net/2020/03/07/nrRSoTQ561jcEzF.png">
-
-<h2 id="二、I-O设备"><a href="#二、I-O设备" class="headerlink" title="二、I/O设备"></a>二、I/O设备</h2><h3 id="1-概述"><a href="#1-概述" class="headerlink" title="1.概述"></a>1.概述</h3><p><strong>外部设备大致分三类</strong>：</p>
-<blockquote>
-<ol>
-<li><strong>人机交互设备</strong>：键盘、鼠标、打印机、显示器</li>
-<li><strong>计算机信息存储设备</strong>：磁盘、光盘、磁带</li>
-<li><strong>机-机通信设备</strong>：调制解调器等</li>
-</ol>
-</blockquote>
-<h3 id="2-输入设备"><a href="#2-输入设备" class="headerlink" title="2.输入设备"></a>2.输入设备</h3><blockquote>
-<p>键盘,鼠标,触摸屏</p>
-</blockquote>
-<h3 id="3-输出设备"><a href="#3-输出设备" class="headerlink" title="3.输出设备"></a>3.输出设备</h3><p><strong>显示器</strong>:</p>
-<blockquote>
-<p><strong>字符显示</strong>：字符发生器<br><strong>图形显示</strong>：主观图像<br><strong>图像显示</strong>：客观图像</p>
-</blockquote>
-<p><strong>打印机</strong></p>
-<h3 id="4-其他I-O设备"><a href="#4-其他I-O设备" class="headerlink" title="4.其他I/O设备"></a>4.其他I/O设备</h3><blockquote>
-<p><strong>A/D、D/A</strong>：模拟/数字（数字/模拟）转换器</p>
-<p><strong>终端</strong>：完成显示控制与存储、键盘管理及通信控制,由键盘和显示器组成</p>
-<p><strong>汉字处理</strong>：汉字输入、汉字存储、汉字输出</p>
-</blockquote>
-<h3 id="5-多媒体技术"><a href="#5-多媒体技术" class="headerlink" title="5.多媒体技术"></a>5.多媒体技术</h3><h2 id="三、I-O接口"><a href="#三、I-O接口" class="headerlink" title="三、I/O接口"></a>三、I/O接口</h2><h3 id="1-概述-1"><a href="#1-概述-1" class="headerlink" title="1.概述"></a>1.概述</h3><p><strong>为什么要设置接口</strong>：</p>
-<blockquote>
-<ol>
-<li>实现设备的选择</li>
-<li>实现数据缓冲达到速度匹配</li>
-<li>实现数据串 并格式转换</li>
-<li>实现电平转换</li>
-<li>传送控制命令</li>
-<li>反映设备的状态（“忙”、“就绪”、“中断请求”）</li>
-</ol>
-</blockquote>
-<h3 id="2-接口功能和组成"><a href="#2-接口功能和组成" class="headerlink" title="2.接口功能和组成"></a>2.接口功能和组成</h3><p><strong>总线连接方式的 I/O 接口电路</strong>：</p>
-<img width="400" src="https://i.loli.net/2020/03/07/APtNq3x9gLrJUeE.png">
-
-<p><strong>接口的功能和组成</strong>：</p>
-<table>
-<thead>
-<tr>
-<th align="center">功能</th>
-<th align="center">组成</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">选址功能</td>
-<td align="center">设备选择电路</td>
-</tr>
-<tr>
-<td align="center">传送命令的功能</td>
-<td align="center">命令寄存器、命令译码器</td>
-</tr>
-<tr>
-<td align="center">传送数据的功能</td>
-<td align="center">数据缓冲寄存器</td>
-</tr>
-<tr>
-<td align="center">反映设备状态的功能</td>
-<td align="center">设备状态标记</td>
-</tr>
-</tbody></table>
-<p><strong>I/O 接口的基本组成</strong>：</p>
-<img width="500" src="https://i.loli.net/2020/03/07/cPHaQ4GVxw7D9Wd.png">
-
-<h3 id="3-接口类型"><a href="#3-接口类型" class="headerlink" title="3.接口类型"></a>3.接口类型</h3><ul>
-<li><strong>按数据传送方式分类</strong></li>
-</ul>
-<blockquote>
-<p><strong>并行接口</strong>：Intel 8255<br><strong>串行接口</strong>：Intel 8251</p>
-</blockquote>
-<ul>
-<li><strong>按功能选择的灵活性分类</strong></li>
-</ul>
-<blockquote>
-<p><strong>可编程接口</strong>：Intel 8255、 Intel 8251<br><strong>不可编程接</strong>口：Intel 8212</p>
-</blockquote>
-<ul>
-<li><strong>按通用性分类</strong></li>
-</ul>
-<blockquote>
-<p><strong>通用接口</strong>：Intel 8255、 Intel 8251<br><strong>专用接口</strong>：Intel 8279、 Intel 8275</p>
-</blockquote>
-<ul>
-<li><strong>按数据传送的控制方式分类</strong></li>
-</ul>
-<blockquote>
-<p><strong>中断接口</strong>：Intel 8259<br><strong>DMA接口</strong>：Intel 8257</p>
-</blockquote>
-<h2 id="四、程序查询方式"><a href="#四、程序查询方式" class="headerlink" title="四、程序查询方式"></a>四、程序查询方式</h2><h3 id="1-程序查询流程"><a href="#1-程序查询流程" class="headerlink" title="1.程序查询流程"></a>1.程序查询流程</h3><img width="300" src="https://i.loli.net/2020/03/07/Bu7jrzvdgxJyEWH.png">
-
-<h3 id="2-程序查询方式接口电路"><a href="#2-程序查询方式接口电路" class="headerlink" title="2.程序查询方式接口电路"></a>2.程序查询方式接口电路</h3><img width="500" src="https://i.loli.net/2020/03/07/tLW7k8aX9IphoOF.png">
-
-<h2 id="五、程序中断方式"><a href="#五、程序中断方式" class="headerlink" title="五、程序中断方式"></a>五、程序中断方式</h2><h3 id="1-中段的概念"><a href="#1-中段的概念" class="headerlink" title="1.中段的概念"></a>1.中段的概念</h3><img width="400" src="https://i.loli.net/2020/03/07/Npm498SVK7bfRqk.png">
-
-<h3 id="2-I-O中断的产生"><a href="#2-I-O中断的产生" class="headerlink" title="2.I/O中断的产生"></a>2.I/O中断的产生</h3><img width="500" src="https://i.loli.net/2020/03/07/J7PDxH9KzGOBXR2.png">
-
-<h3 id="3-程序中断方式的接口电路"><a href="#3-程序中断方式的接口电路" class="headerlink" title="3.程序中断方式的接口电路"></a>3.程序中断方式的接口电路</h3><p><strong>配置中断请求触发器和中断屏蔽触发器</strong>：</p>
-<img width="500" src="https://i.loli.net/2020/03/07/kyuBxpogrt4vIWN.png">
-
-<p><strong>排队器</strong>：</p>
-<blockquote>
-<p><strong>硬件</strong>：在 CPU 内或在接口电路中（链式排队器）<br><strong>软件</strong>：第八章</p>
-</blockquote>
-<img width="500" src="https://i.loli.net/2020/03/07/FIzBkjQZWm81pMt.png">
-
-<p><strong>中断向量地址形成部件</strong>：</p>
-<blockquote>
-<p><strong>硬件向量法</strong>：由硬件产生向量地址,再由向量地址找到入口地址<br><strong>软件产生</strong>：第八章</p>
-</blockquote>
-<img width="500" src="https://i.loli.net/2020/03/07/cviBKLdSlqaWtOC.png">
-
-<p><strong>程序中断方式接口电路的基本组成</strong>：</p>
-<img width="500" src="https://i.loli.net/2020/03/07/N7jkvtXyxc8YWGB.png">
-
-<h3 id="4-I-O中断处理过程"><a href="#4-I-O中断处理过程" class="headerlink" title="4.I/O中断处理过程"></a>4.I/O中断处理过程</h3><p><strong>CPU 响应中断的条件和时间</strong>：</p>
-<ul>
-<li><p><strong>条件</strong>：</p>
-<blockquote>
-<p>允许中断触发器EINT = 1</p>
-<p>用开中断指令将EINT置 “1”</p>
-<p>用 中断指令将EINT置“ 0” 或硬件自动复位</p>
-</blockquote>
-</li>
-<li><p><strong>时间</strong>：</p>
-<blockquote>
-<p>当D = 1（随机）且 MASK = 0 时在每条指令执行阶段的结束前CPU发中断查询信号（将 INTR 置“1” ）</p>
-</blockquote>
-</li>
-</ul>
-<p><strong>I/O 中断处理过程</strong>：</p>
-<img width="500" src="https://i.loli.net/2020/03/07/wcgdWNXuorIDyin.png">
-
-<h3 id="5-中断服务程序流程"><a href="#5-中断服务程序流程" class="headerlink" title="5.中断服务程序流程"></a>5.中断服务程序流程</h3><p><strong>中断服务程序的流程</strong>：</p>
-<blockquote>
-<ol>
-<li><strong>保护现场</strong>：</li>
+<li>通用寄存器</li>
 </ol>
 <ul>
-<li>程序断点的保护：中断隐指令完成</li>
-<li>寄存器内容的保护：进栈指令</li>
+<li><strong>存放操作数</strong></li>
+<li>可作某种寻址方式所需的专用寄存器</li>
 </ul>
 <ol start="2">
-<li><p><strong>中断服务</strong>：对不同的 I/O 设备具有不同内容的设备服务</p>
-</li>
-<li><p><strong>恢复现场</strong>：出栈指令</p>
-</li>
-<li><p><strong>中断返回</strong>：中断返回指令</p>
-</li>
+<li>数据寄存器</li>
 </ol>
-</blockquote>
-<p><strong>单重中断和多重中断</strong>：</p>
-<blockquote>
-<p><strong>单重中断</strong>：不允许中断现行的中断服务程序</p>
-<p><strong>多重中断</strong>：允许级别更高的中断源中断现行的中断服务程序</p>
-</blockquote>
-<p><strong>单重中断和多重中断的服务程序流程</strong>：</p>
-<img width="500" src="https://i.loli.net/2020/03/07/igknzN24qcXSprb.png">
-
-<p><strong>主程序和服务程序抢占 CPU 示意图</strong>：</p>
-<img width="500" src="https://i.loli.net/2020/03/07/5rtPgBbjHwkxIzN.png">
-
-<h2 id="六、DMA方式"><a href="#六、DMA方式" class="headerlink" title="六、DMA方式"></a>六、DMA方式</h2><h3 id="1-DMA方式的特点"><a href="#1-DMA方式的特点" class="headerlink" title="1.DMA方式的特点"></a>1.DMA方式的特点</h3><p><strong>DMA 和程序中断两种方式的数据通路</strong></p>
-<img width="500" src="https://i.loli.net/2020/03/07/DJglxi7VbBWwZ65.png">
-
-<p><strong>DMA 与主存交换数据的三种方式</strong>：</p>
 <ul>
-<li><p>停止 CPU 访问主存:</p>
-<blockquote>
-<p>控制简单</p>
-<p>CPU处于不工作状态或保持状态</p>
-<p>未充分发挥CPU对主存的利用率</p>
+<li><strong>存放操作数</strong>（满足各种数据类型）</li>
+<li>两个寄存器拼接存放双倍字长数据</li>
+</ul>
+<ol start="3">
+<li>地址寄存器</li>
+</ol>
+<ul>
+<li><strong>存放地址</strong>，其位数应满足最大的地址范围</li>
+<li>用于特殊的寻址方式 段基值 栈指针</li>
+</ul>
+<ol start="4">
+<li>条件码寄存器</li>
+</ol>
+<ul>
+<li><strong>存放条件码</strong>，可作程序分支的依据</li>
+<li>如 正、负、零、溢出、进位等</li>
+</ul>
 </blockquote>
-<img width="500" src="https://i.loli.net/2020/03/07/EbZxO6B931SQ5KP.png">
+<p><strong>控制和状态寄存器</strong></p>
+<blockquote>
+<ul>
+<li><p>控制寄存器</p>
+<p><code>PC</code> -&gt; <code>MAR</code> -&gt;<code>M</code> -&gt; <code>MDR</code> -&gt; <code>IR</code></p>
+<p>控制CPU操作：</p>
+<p>MAR、MDR、IR   ：  用户不可见</p>
+<p>PC            ：  用户可见</p>
 </li>
-<li><p>周期挪用（或周期窃取）</p>
-<blockquote>
-<p>CPU此时不访存</p>
-<p>CPU正在访存</p>
-<p>CPU与DMA同时请求访存：此时CPU将总线控制权让给DMA</p>
-</blockquote>
-<img width="500" src="https://i.loli.net/2020/03/07/1ueaiOhx4KzytRI.png">
+<li><p>状态寄存器</p>
+<p>  状态寄存器：存放条件码</p>
+<p>  PSW寄存器：存放程序状态字</p>
 </li>
-<li><p>DMA 与 CPU 交替访问：不需要申请建立和归还 总线的使用权  </p>
-<blockquote>
-<p><strong>CPU工作周期分为C1C2</strong>：</p>
-<p>C1 专供 DMA 访存</p>
-<p>C2 专供 CPU 访存</p>
+</ul>
 </blockquote>
-<img width="500" src="https://i.loli.net/2020/03/07/Tk1xBeKnp7Joy6j.png">
+<h3 id="4-控制单元和中断系统"><a href="#4-控制单元和中断系统" class="headerlink" title="4.控制单元和中断系统"></a>4.控制单元和中断系统</h3><h2 id="5-ALU"><a href="#5-ALU" class="headerlink" title="5.ALU"></a>5.ALU</h2><h2 id="二、指令周期"><a href="#二、指令周期" class="headerlink" title="二、指令周期"></a>二、指令周期</h2><h3 id="1-指令周期的基本概念"><a href="#1-指令周期的基本概念" class="headerlink" title="1.指令周期的基本概念"></a>1.指令周期的基本概念</h3><p><strong>指令周期</strong></p>
+<img width="400" src="https://i.loli.net/2020/03/17/wXsdo1CnFTt5vgB.png">
+
+<p><strong>每条指令的指令周期不同</strong></p>
+<img width="500" src="https://i.loli.net/2020/03/17/cu2jdMath5791O3.png">
+
+<p><strong>具有间接寻址的指令周期</strong></p>
+<img width="450" src="https://i.loli.net/2020/03/17/eAIK7YXazVPjOoN.png">
+
+<p><strong>带有中断周期的指令周期</strong></p>
+<img width="500" src="https://i.loli.net/2020/03/17/1rK9HaPBkITD5t7.png">
+
+<p><strong>指令周期流程</strong></p>
+<img width="300" src="https://i.loli.net/2020/03/17/CJj1mzeU2LXoNyO.png">
+
+<p><strong>CPU 工作周期的标志</strong></p>
+<img width="400" src="https://i.loli.net/2020/03/17/NdFcwmorftenpUj.png">
+
+<h3 id="2-指令周期的数据流"><a href="#2-指令周期的数据流" class="headerlink" title="2.指令周期的数据流"></a>2.指令周期的数据流</h3><p><strong>取指周期数据流</strong></p>
+<img width="400" src="https://i.loli.net/2020/03/17/WiZPUFHlmI7Kfuy.png">
+
+<p><strong>间址周期数据流</strong></p>
+<img width="400" src="https://i.loli.net/2020/03/17/rHE2dkJfsNaoWDj.png">
+
+<p><strong>执行周期数据流</strong></p>
+<blockquote>
+<p>不同指令的执行周期数据流不同  </p>
+</blockquote>
+<p><strong>中断周期数据流</strong></p>
+<img width="450" src="https://i.loli.net/2020/03/17/dt2LebN4oqSD39G.png">
+
+<h2 id="三、指令流水"><a href="#三、指令流水" class="headerlink" title="三、指令流水"></a>三、指令流水</h2><h3 id="1-如何提高机器速度"><a href="#1-如何提高机器速度" class="headerlink" title="1.如何提高机器速度"></a>1.如何提高机器速度</h3><p><strong>1.提高访存速度</strong></p>
+<blockquote>
+<p>高速芯片   Cache    多体并行</p>
+</blockquote>
+<p><strong>2.提高 I/O 和主机之间的传送速度</strong></p>
+<blockquote>
+<p>中断  DMA    通道    I/O 处理机   多总线</p>
+</blockquote>
+<p><strong>3.提高运算器速度</strong></p>
+<blockquote>
+<p>高速芯片   改进算法   快速进位链</p>
+</blockquote>
+<p><strong>4.提高整机处理能力</strong></p>
+<blockquote>
+<p>高速器件   改进系统结构 ，开发系统的并行性</p>
+</blockquote>
+<h3 id="2-系统的并行性"><a href="#2-系统的并行性" class="headerlink" title="2.系统的并行性"></a>2.系统的并行性</h3><p><strong>并行的概念</strong></p>
+<blockquote>
+<p><strong>并发</strong>：两个或两个以上事件在 同一时刻 发生</p>
+<p><strong>同时</strong>：两个或两个以上事件在 同一时间段 发生</p>
+</blockquote>
+<p><strong>并行性的等级</strong></p>
+<blockquote>
+<p>过程级（程序、进程）   粗粒度    软件实现  </p>
+<p>指令级（指令之间）    细粒度     硬件实现    </p>
+</blockquote>
+<h3 id="3-指令流水原理"><a href="#3-指令流水原理" class="headerlink" title="3.指令流水原理"></a>3.指令流水原理</h3><p><strong>指令串行</strong></p>
+<img width="500" src="https://i.loli.net/2020/03/17/V78IQUPsNoTKMSL.png">
+
+<p><strong>指令二级流水</strong></p>
+<img width="400" src="https://i.loli.net/2020/03/17/3tRfmrdZPzEh9qx.png">
+
+<p><strong>影响指令流水效率加倍的因素</strong></p>
+<img width="500" src="https://i.loli.net/2020/03/17/RI7P4anAGBFOzVk.png">
+
+<p><strong>指令的六级流水</strong></p>
+<img width="500" src="https://i.loli.net/2020/03/17/MLz3QGwb9OYKlv2.png">
+
+<h3 id="4-影响流水线性能的因素"><a href="#4-影响流水线性能的因素" class="headerlink" title="4.影响流水线性能的因素"></a>4.影响流水线性能的因素</h3><p><strong>结构相关</strong>:不同指令争用同一功能部件产生资源冲突  </p>
+<p><strong>数据相关</strong>:不同指令因重叠操作，可能改变操作数的 读/写 访问顺序  </p>
+<img width="400" src="https://i.loli.net/2020/03/17/LNpq1s6H7vMhOmP.png">
+
+<p><strong>控制相关</strong>:由转移指令引起  </p>
+<img width="400" src="https://i.loli.net/2020/03/17/YMK7pcuNPUz5I1q.png">
+
+<h3 id="5-流水线性能"><a href="#5-流水线性能" class="headerlink" title="5.流水线性能"></a>5.流水线性能</h3><p><strong>吞吐率</strong>:单位时间内 流水线所完成指令 或 输出结果 的 数量  </p>
+<p><strong>加速比 Sp</strong>:m 段的 流水线的速度 与等功能的 非流水线的速度 之比  </p>
+<p><strong>效率</strong>:流水线中各功能段的 利用率  </p>
+<h3 id="6-流水线中的多发技术"><a href="#6-流水线中的多发技术" class="headerlink" title="6.流水线中的多发技术"></a>6.流水线中的多发技术</h3><p><strong>超标量技术</strong></p>
+<img width="450" src="https://i.loli.net/2020/03/17/cdNZ8MCRrHaYQFE.png">
+
+<p><strong>超流水线技术</strong></p>
+<img width="450" src="https://i.loli.net/2020/03/17/ItYi2RUuFLb6CaQ.png">
+
+<p><strong>超长指令字技术</strong></p>
+<img width="450" src="https://i.loli.net/2020/03/17/rcK38NQRaGJPo2p.png">
+
+<h3 id="7-流水线结构"><a href="#7-流水线结构" class="headerlink" title="7.流水线结构"></a>7.流水线结构</h3><p><strong>指令流水线结构</strong></p>
+<img width="450" src="https://i.loli.net/2020/03/17/nS1xH9wlFoPyacM.png">
+
+<p><strong>运算流水线</strong></p>
+<img width="350" src="https://i.loli.net/2020/03/17/HoQbsKJanmP6ZMW.png">
+
+<h2 id="四、中断系统"><a href="#四、中断系统" class="headerlink" title="四、中断系统"></a>四、中断系统</h2><h3 id="1-概述"><a href="#1-概述" class="headerlink" title="1.概述"></a>1.概述</h3><p><strong>引起中断的各种因素</strong></p>
+<blockquote>
+<p>(1) 人为设置的中断 ：如 转管指令</p>
+<p>(2) 程序性事故：溢出、操作码不能识别、除法非法</p>
+<p>(3) 硬件故障</p>
+<p>(5) 外部事件</p>
+<p>(4) I/O设备：用键盘中断现行程序</p>
+</blockquote>
+<p><strong>中断系统需解决的问题</strong></p>
+<blockquote>
+<p>(1) 各中断源向CPU提出请求</p>
+<p>(2) 各中断源同时提出请求怎么办 ？</p>
+<p>(3) CPU什么条件、什么时间、 以什么方式，响应中断 ？</p>
+<p>(4) 如何保护现场 ？</p>
+<p>(5) 如何寻找入口地址 ？</p>
+<p>(6) 如何恢复现场，如何 返回 ？</p>
+<p>(7) 处理中断的过程中又出现新的中断怎么办 ？</p>
+</blockquote>
+<h3 id="2-中断请求标记和中断判优逻辑"><a href="#2-中断请求标记和中断判优逻辑" class="headerlink" title="2.中断请求标记和中断判优逻辑"></a>2.中断请求标记和中断判优逻辑</h3><p><strong>中断请求标记INTR</strong></p>
+<img width="400" src="https://i.loli.net/2020/03/17/gnlE6wB98itFWy2.png">
+
+<p><strong>中断判优逻辑</strong></p>
+<ul>
+<li><p>硬件实现（排队器）</p>
+<img width="400" src="https://i.loli.net/2020/03/17/P9zIq4QeTp3DKkJ.png">
+</li>
+<li><p>软件实现（程序查询）</p>
+<img width="400" src="https://i.loli.net/2020/03/17/JXPvIFT2kCWpmyO.png">
 
 </li>
 </ul>
-<h3 id="2-DMA接口的功能和组成"><a href="#2-DMA接口的功能和组成" class="headerlink" title="2.DMA接口的功能和组成"></a>2.DMA接口的功能和组成</h3><p><strong>DMA 接口功能</strong>：</p>
+<h3 id="3-中断服务程序入口地址寻找"><a href="#3-中断服务程序入口地址寻找" class="headerlink" title="3.中断服务程序入口地址寻找"></a>3.中断服务程序入口地址寻找</h3><p><strong>硬件向量法</strong></p>
+<img width="500" src="https://i.loli.net/2020/03/17/Mp3UoxyGHfiAu2J.png">
+
+<p><strong>软件查询法</strong></p>
+<img width="450" src="https://i.loli.net/2020/03/17/qyRHPjd6DlCmLWb.png">
+
+<h3 id="4-中断响应"><a href="#4-中断响应" class="headerlink" title="4.中断响应"></a>4.中断响应</h3><p><strong>响应中断的条件</strong></p>
+<p>允许中断触发器 EINT = 1</p>
+<p><strong>响应中断的时间</strong></p>
+<img width="450" src="https://i.loli.net/2020/03/17/9ij6LoHNISmdYeW.png">
+
+<p><strong>中断隐指令</strong></p>
+<img width="400" src="https://i.loli.net/2020/03/17/tJeif4q3OFhkNd9.png">
+
+<h3 id="5-保护现场和恢复现场"><a href="#5-保护现场和恢复现场" class="headerlink" title="5.保护现场和恢复现场"></a>5.保护现场和恢复现场</h3><p><strong>保护现场</strong></p>
 <blockquote>
-<ol>
-<li>向CPU申请DMA传送</li>
-<li>处理总线控制权的转交</li>
-<li>管理系统总线、控制数据传送</li>
-<li>确定据传送的首地址和长度；修正传送过程中的数据地址和长度</li>
-<li>DMA传送结束时，给出操作完成信号</li>
-</ol>
+<p>断点: 中断隐指令完成  </p>
+<p>寄存器内容:   中断服务程序完成  </p>
 </blockquote>
-<p><strong>DMA 接口组成</strong>：</p>
-<img width="500" src="https://i.loli.net/2020/03/07/7FWwXMlzAEZU81m.png">
+<p><strong>恢复现场</strong></p>
+<img width="400" src="https://i.loli.net/2020/03/17/yGifrdmNqcu1ga8.png">
 
-<h3 id="3-DMA的工作过程"><a href="#3-DMA的工作过程" class="headerlink" title="3.DMA的工作过程"></a>3.DMA的工作过程</h3><p><strong>预处理</strong>：通知 DMA 控制逻辑传送方向（入/出）</p>
-<blockquote>
-<p>设备地址 DMA 的 DAR</p>
-<p>主存地址 DMA 的 AR</p>
-<p>传送字数 DMA 的 WC </p>
-</blockquote>
-<p><strong>DMA传送过程</strong>：</p>
-<img width="450" src="https://i.loli.net/2020/03/07/JdLnlsKjRX89Y12.png">
+<h3 id="6-多重中断"><a href="#6-多重中断" class="headerlink" title="6.多重中断"></a>6.多重中断</h3><p><strong>多重中断的概念</strong></p>
+<img width="300" src="https://i.loli.net/2020/03/17/rLJGbnEM917Cvy5.png">
 
-<p><strong>数据传送过程（输出）</strong>：</p>
-<img width="500" src="https://i.loli.net/2020/03/07/rXxAqp2nPKoJOVC.png">
+<p><strong>实现多重中断的条件</strong></p>
+<img width="450" src="https://i.loli.net/2020/03/17/FGIsvNhiUJ1n8Rw.png">
 
-<p><strong>后处理</strong>：</p>
-<blockquote>
-<p>校验送入主存的数是否正确</p>
-<p>是否继续用 DMA</p>
-<p>测试传送过程是否正确，错则转诊断程序</p>
-<p>由中断服务程序完成</p>
-</blockquote>
-<h3 id="4-DMA接口的类型"><a href="#4-DMA接口的类型" class="headerlink" title="4.DMA接口的类型"></a>4.DMA接口的类型</h3><p><strong>选择型</strong>：在物理上连接多个设备；在逻辑上只允许连接一个设备</p>
-<img width="500" src="https://i.loli.net/2020/03/07/KbxfyVip3rwhkIZ.png">
+<p><strong>屏蔽技术</strong></p>
+<ul>
+<li><p>屏蔽触发器的作用</p>
+<img width="450" src="https://i.loli.net/2020/03/17/OTX5y4nzeAR7KPx.png">
+</li>
+<li><p>屏蔽字</p>
+<img width="400" src="https://i.loli.net/2020/03/17/wFUr2NLT5ogqGzh.png">
+</li>
+<li><p>屏蔽技术可改变处理优先等级</p>
+<img width="450" src="https://i.loli.net/2020/03/17/p8QdMgakPxGwh1b.png">
 
-<p><strong>多路型</strong>：在物理上连接多个设备；在逻辑上允许连接多个设备同时工作</p>
-<img width="500" src="https://i.loli.net/2020/03/07/kp2PNDeGiOWwtRo.png">
+</li>
+</ul>
+<p><strong>多重中断的断点保护</strong></p>
+<ul>
+<li><p>断点进栈(中断隐指令)</p>
+</li>
+<li><p>断点存入“ 0 ” 地址(中断隐指令)</p>
+<img width="400" src="https://i.loli.net/2020/03/17/2FviUTXfaKPYDJI.png">
+</li>
+<li><p>程序断点存入 “ 0 ” 地址的断点保护</p>
+<img width="400" src="https://i.loli.net/2020/03/17/4IhANDgpYB23OXW.png">
 
-<h2 id="七、DMA-方式与程序中断方式的比较"><a href="#七、DMA-方式与程序中断方式的比较" class="headerlink" title="七、DMA 方式与程序中断方式的比较"></a>七、DMA 方式与程序中断方式的比较</h2><table>
-<thead>
-<tr>
-<th align="center"></th>
-<th align="center">中断方式</th>
-<th align="center">DMA 方式</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">数据传输</td>
-<td align="center">程序</td>
-<td align="center">硬件</td>
-</tr>
-<tr>
-<td align="center">响应时间</td>
-<td align="center">指令执行结束</td>
-<td align="center">存取周期结束</td>
-</tr>
-<tr>
-<td align="center">处理异常情况</td>
-<td align="center">能</td>
-<td align="center">不能</td>
-</tr>
-<tr>
-<td align="center">中断请求</td>
-<td align="center">传送数据</td>
-<td align="center">后处理</td>
-</tr>
-<tr>
-<td align="center">优先级</td>
-<td align="center">低</td>
-<td align="center">高</td>
-</tr>
-</tbody></table>
-<p>注：本篇除思维导图，其它图片均来自PPT课件</p>
+
+
+</li>
+</ul>
+<p>注：本文章除思维导图，其他图片来源于课程PPT。</p>
 <br>
 
 <blockquote>
@@ -866,7 +778,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://sunmengxin.cn/CSCC/05-IO/">https://sunmengxin.cn/CSCC/05-IO/</a>
+                    <a href="https://sunmengxin.cn/CSCC/08-structure-function/">https://sunmengxin.cn/CSCC/08-structure-function/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1084,7 +996,7 @@
         repo: 'MM-X.github.io',
         owner: 'MM-X',
         admin: "MM-X",
-        id: '2020-03-07T21-08-09',
+        id: '2020-03-16T21-08-09',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1368,29 +1280,30 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/CSCC/06-operational-method/">
+                <a href="/CSCC/08-structure-function/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="计算机组成原理 - 6.计算机的运算方法">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="计算机组成原理 - 8.CPU的结构与功能">
                         
-                        <span class="card-title">计算机组成原理 - 6.计算机的运算方法</span>
+                        <span class="card-title">计算机组成原理 - 8.CPU的结构与功能</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            《计算机组成原理》总结第六章
+                            《计算机组成原理》总结第八章
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-10
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1403,6 +1316,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1429,31 +1343,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/storage-difference/">
+                <a href="/CSCC/07-instruction-system/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="RAM、ROM、FLASH、EEPORM、PSRAM各是什么及其区别">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="计算机组成原理 - 7.指令系统">
                         
-                        <span class="card-title">RAM、ROM、FLASH、EEPORM、PSRAM各是什么及其区别</span>
+                        <span class="card-title">计算机组成原理 - 7.指令系统</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            RAM、ROM、FLASH、EEPORM、PSRAM对比
+                            《计算机组成原理》总结第七章
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-06
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-14
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    笔记
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" class="post-category">
+                                    计算机组成原理
                                 </a>
                             
                             
@@ -1467,12 +1381,12 @@
                         <span class="chip bg-color">原创</span>
                     </a>
                     
-                    <a href="/tags/%E7%A1%AC%E4%BB%B6/">
-                        <span class="chip bg-color">硬件</span>
+                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">
+                        <span class="chip bg-color">计算机组成原理</span>
                     </a>
                     
-                    <a href="/tags/%E5%AD%98%E5%82%A8%E5%99%A8/">
-                        <span class="chip bg-color">存储器</span>
+                    <a href="/tags/%E7%A1%AC%E4%BB%B6/">
+                        <span class="chip bg-color">硬件</span>
                     </a>
                     
                 </div>
