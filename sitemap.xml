@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sunmengxin.cn/about/</loc>
+    
+    <lastmod>2020-04-10T15:23:19.370Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sunmengxin.cn/CSCC/08-structure-function/</loc>
     
-    <lastmod>2020-03-18T14:29:32.035Z</lastmod>
+    <lastmod>2020-03-18T14:32:28.276Z</lastmod>
     
   </url>
   
@@ -117,13 +124,6 @@
     <loc>https://sunmengxin.cn/contact/</loc>
     
     <lastmod>2019-12-18T06:49:35.089Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sunmengxin.cn/about/</loc>
-    
-    <lastmod>2019-12-18T06:48:57.057Z</lastmod>
     
   </url>
   
