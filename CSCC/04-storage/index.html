@@ -811,13 +811,21 @@
 </blockquote>
 <h2 id="五、附加总结"><a href="#五、附加总结" class="headerlink" title="五、附加总结"></a>五、附加总结</h2><blockquote>
 <ol>
-<li><code>ROM</code>在系统<strong>停止供电</strong>的时候仍然可以<strong>保持数据</strong>，而<code>RAM</code>通常都是在<strong>掉电</strong>之后就<strong>丢失数据</strong>。</li>
-<li><code>EEPROM</code>(电子可擦除可编程ROM)，<code>ROM</code>的一种改进，可擦除重复使用，掉电数据不丢失</li>
-<li><code>FLASH</code>存储器又称闪存,它结合了<code>ROM</code>和<code>RA</code>M的长处,具有<code>EEPROM</code>(电子可擦除可编程)特点，掉电不丢失，可以快速读取数据,用于嵌入式系统存储程序，有些用<code>FLASH</code>部分扇区充当<code>EEPROM</code>(ESP8266)</li>
-<li><code>SRAM</code>(静态RAM,Static RAM)，速度非常快，是目前读写最快的存储设备了，而且不需要刷新，但是它也非常昂贵，用作一级缓冲，二级缓冲</li>
-<li><code>DRA</code>M(动态RAM,Dynamic RAM),<code>DRAM</code>保留数据的时间很短(电容存储，需要不断充电刷新)，速度也比<code>SRAM</code>慢，比任何的<code>ROM</code>都要快，价格上来说<code>DRAM</code>相比<code>SRAM</code>要便宜很多</li>
-<li><code>SDRAM</code>(同步动态随机存取存储器,Synchronous Dynamic RAM)，应用于代码大，算法复杂，带操作系统的应用，<code>SDRAM</code>独立于<code>MPU</code>，可以根据应用的情况选择<code>RAM</code>的大小，一般外接用<code>SDRAM</code>，容量比较大，一般<code>MB~GB</code>，<code>DDR</code>是<code>SDRAM</code>的一种</li>
-<li><code>PSRAM</code>(伪静态随机存储器,Pseudo static random access memory),内部的内存颗粒跟<code>DRAM</code>的颗粒相似，但外部的接口跟<code>SRAM</code>相似，不需要<code>DRAM</code>那样复杂的控制器和刷新机制,内部自带刷新机制。</li>
+<li><p><code>ROM</code>在系统<strong>停止供电</strong>的时候仍然可以<strong>保持数据</strong>，而<code>RAM</code>通常都是在<strong>掉电</strong>之后就<strong>丢失数据</strong>。</p>
+</li>
+<li><p><code>EEPROM</code>(电子可擦除可编程ROM)，<code>ROM</code>的一种改进，可擦除重复使用，掉电数据不丢失</p>
+</li>
+<li><p><code>FLASH</code>存储器又称闪存,它结合了<code>ROM</code>和<code>RAM</code>的长处,具有<code>EEPROM</code>(电子可擦除可编程)特点，掉电不丢失，可以快速读取数据,用于嵌入式系统存储程序，有些用<code>FLASH</code>部分扇区充当<code>EEPROM</code>(ESP8266)</p>
+</li>
+<li><p><code>SRAM</code>(静态RAM,Static RAM)，速度非常快，是目前读写最快的存储设备了，而且不需要刷新，但是它也非常昂贵，用作一级缓冲，二级缓冲</p>
+</li>
+<li><p><code>DRAM</code>(动态RAM,</p>
+<p> Dynamic RAM),<code>DRAM</code>保留数据的时间很短(电容存储，需要不断充电刷新)，速度也比<code>SRAM</code>慢，比任何的<code>ROM</code>都要快，价格上来说<code>DRAM</code>相比<code>SRAM</code>要便宜很多</p>
+</li>
+<li><p><code>SDRAM</code>(同步动态随机存取存储器,Synchronous Dynamic RAM)，应用于代码大，算法复杂，带操作系统的应用，<code>SDRAM</code>独立于<code>MPU</code>，可以根据应用的情况选择<code>RAM</code>的大小，一般外接用<code>SDRAM</code>，容量比较大，一般<code>MB~GB</code>，<code>DDR</code>是<code>SDRAM</code>的一种</p>
+</li>
+<li><p><code>PSRAM</code>(伪静态随机存储器,Pseudo static random access memory),内部的内存颗粒跟<code>DRAM</code>的颗粒相似，但外部的接口跟<code>SRAM</code>相似，不需要<code>DRAM</code>那样复杂的控制器和刷新机制,内部自带刷新机制。</p>
+</li>
 </ol>
 </blockquote>
 <p>注：本篇除思维导图，其它图片均来自PPT课件</p>
@@ -1687,7 +1695,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">27.8k</span>
+                <span class="white-color">35k</span>
                 
 
         </div>
